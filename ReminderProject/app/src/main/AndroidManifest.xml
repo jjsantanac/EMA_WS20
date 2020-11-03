@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ReminderProject">
+        <activity android:name=".customize"></activity>
+        <activity android:name=".uebungen" />
+        <activity android:name=".settings" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
