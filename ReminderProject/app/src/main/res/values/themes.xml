@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.ReminderProject" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. Off Color #D00000 -->
+        <!-- Primary brand color. Off Color #D00000,@color/purple_700 -->
         <item name="colorPrimary">#66FF99</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
