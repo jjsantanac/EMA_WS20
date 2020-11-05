@@ -10,14 +10,65 @@
 
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="167dp"
-        android:layout_height="105dp"
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="301dp"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="122dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Alter" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="195dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Größe" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="275dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Gewicht" />
+
+    <Button
+        android:id="@+id/savedata"
+        android:layout_width="128dp"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="129dp"
+        android:layout_marginBottom="285dp"
+        android:text="Speichern"
+        />
 
 </RelativeLayout>

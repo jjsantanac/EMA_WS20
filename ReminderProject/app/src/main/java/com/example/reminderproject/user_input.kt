@@ -5,6 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import androidx.fragment.app.FragmentManager
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,17 +26,60 @@ class user_input : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+
+
+    fun closeFragment(){
+        val transaction = parentFragmentManager.beginTransaction()
+        val fragment=user_input()
+        transaction.addToBackStack(null)
+        transaction.commit()
+
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+
         }
+        val name=view
     }
+
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
+
+        val view=view
+
+        if (view != null) {
+           val name=view.findViewById<EditText>(R.id.name).text.toString()
+            val age=view.findViewById<EditText>(R.id.age).text.toString()
+            val height=view.findViewById<EditText>(R.id.height).text.toString()
+            val weight=view.findViewById<EditText>(R.id.weight).text.toString()
+
+            val namefield=view.findViewById<TextView>(R.id.namefield)
+            val agefield=view.findViewById<TextView>(R.id.agefield)
+            val heightfield=view.findViewById<TextView>(R.id.heightfield)
+            val weightfield=view.findViewById<TextView>(R.id.weightfield)
+
+
+            namefield.text=name
+            agefield.text=age
+            heightfield.text=height
+            weightfield.text=weight
+
+            val savechanges=view.findViewById<Button>(R.id.savedata)
+
+            savechanges.setOnClickListener({})
+        }
+
+
+
+
         return inflater.inflate(R.layout.fragment_user_input, container, false)
     }
 
