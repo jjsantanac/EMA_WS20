@@ -7,6 +7,8 @@ import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
 
+    public lateinit var userinfo:settings.User
+
     private val switchActivity = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.homescreen -> {
@@ -14,6 +16,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.profile -> {
                 val intent = Intent(this@MainActivity, settings::class.java)
+                intent.putExtra("user",userinfo)
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
             }
@@ -35,6 +38,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        userinfo= settings.User(name = "Julian")
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.botom_navigation)
         bottomNavigation.selectedItemId=R.id.homescreen
