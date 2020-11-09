@@ -3,9 +3,14 @@ package com.example.reminderproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.recyclerview.widget.RecyclerView
 
 class uebungen : AppCompatActivity() {
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var viewAdapter: RecyclerView.Adapter<*>
+    private lateinit var viewManager: RecyclerView.LayoutManager
 
     private val switchActivity = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -40,5 +45,23 @@ class uebungen : AppCompatActivity() {
         bottomNavigation.selectedItemId=R.id.uebungen
 
         bottomNavigation.setOnNavigationItemSelectedListener(switchActivity)
+
+        val historyList=generateDummyList(10)
+
+        val historyview=findViewById<RecyclerView>(R.id.historyview)
+
+        historyview.adapter=HistoryViewAdapter(historyList)
+        historyview.layoutManager=LinearLayoutManager(this)
+        historyview.setHasFixedSize(true)
+    }
+
+    private fun generateDummyList(size: Int): List<historyItem> {
+        val list = ArrayList<historyItem>()
+        for (i in 0 until size) {
+
+            val item = historyItem( "Item $i", "Content 2")
+            list += item
+        }
+        return list
     }
 }
