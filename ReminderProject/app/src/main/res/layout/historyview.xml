@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/removeHistoryitem"
+            android:layout_width="94dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="300dp"
+
+            android:layout_marginRight="1dp"
+            android:background="@color/black"
+            android:src="@drawable/ic_baseline_done_24" />
 
         <TextView
             android:id="@+id/title1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Line 1" />
+            android:text="Line 1"
+            android:fontFamily="@font/custom_font"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/title1"
             android:text="Line 2"
-            android:id="@+id/content1"/>
+            android:id="@+id/content1"
+            android:fontFamily="@font/custom_font"/>
 
 
 

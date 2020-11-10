@@ -1,3 +1,3 @@
 package com.example.reminderproject
 
-data class historyItem (val title:String,val content:String)
+data class historyItem (var title:String,var content:String)

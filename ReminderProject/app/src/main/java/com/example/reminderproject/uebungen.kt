@@ -3,14 +3,15 @@ package com.example.reminderproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.recyclerview.widget.RecyclerView
 
-class uebungen : AppCompatActivity() {
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var viewAdapter: RecyclerView.Adapter<*>
-    private lateinit var viewManager: RecyclerView.LayoutManager
+class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
+
 
     private val switchActivity = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -37,6 +38,23 @@ class uebungen : AppCompatActivity() {
         false
 
     }
+
+    private var historyList=generateDummyList(5)
+
+    private val adapter=HistoryViewAdapter(historyList,this)
+
+
+
+    fun removeItem(view: View){
+
+    }
+
+    override fun onImageClick(position: Int) {
+
+        Toast.makeText(this,"Item $position clicked",Toast.LENGTH_SHORT).show()
+        adapter.notifyDataSetChanged()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uebungen)
@@ -46,16 +64,21 @@ class uebungen : AppCompatActivity() {
 
         bottomNavigation.setOnNavigationItemSelectedListener(switchActivity)
 
-        val historyList=generateDummyList(10)
 
         val historyview=findViewById<RecyclerView>(R.id.historyview)
 
-        historyview.adapter=HistoryViewAdapter(historyList)
+
+
+
+        historyview.adapter=adapter
         historyview.layoutManager=LinearLayoutManager(this)
         historyview.setHasFixedSize(true)
+
+        //val remove_history_item=findViewById<ImageButton>(R.id.removeHistoryitem)
+
     }
 
-    private fun generateDummyList(size: Int): List<historyItem> {
+    private fun generateDummyList(size: Int): ArrayList<historyItem> {
         val list = ArrayList<historyItem>()
         for (i in 0 until size) {
 
