@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".browse_uebuengen"
+    android:id="@+id/uebungen_browser1"
+    android:background="#404040">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="149dp"
+        android:layout_height="159dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="228dp"
+        android:text="test" />
+
+</RelativeLayout>
