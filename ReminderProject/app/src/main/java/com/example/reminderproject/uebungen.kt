@@ -52,6 +52,7 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
     override fun onImageClick(position: Int) {
 
         Toast.makeText(this,"Item $position clicked",Toast.LENGTH_SHORT).show()
+        historyList.removeAt(position)
         adapter.notifyDataSetChanged()
     }
 

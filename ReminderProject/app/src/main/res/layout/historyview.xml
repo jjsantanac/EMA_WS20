@@ -16,7 +16,7 @@
             android:layout_marginLeft="300dp"
 
             android:layout_marginRight="1dp"
-            android:background="@color/black"
+            android:background="@null"
             android:src="@drawable/ic_baseline_done_24" />
 
         <TextView
