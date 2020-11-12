@@ -4,11 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.recyclerview.widget.RecyclerView
+import androidx.fragment.app.Fragment
 
 class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
 
@@ -43,10 +45,11 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
 
     private val adapter=HistoryViewAdapter(historyList,this)
 
-
-
-    fun removeItem(view: View){
-
+    fun browseuebungen(){
+        val transaction = supportFragmentManager.beginTransaction()
+        val fragment=browse_uebuengen()
+        transaction.replace(R.id.uebungen_tab, fragment)
+        transaction.commit()
     }
 
     override fun onImageClick(position: Int) {
@@ -67,6 +70,10 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
 
 
         val historyview=findViewById<RecyclerView>(R.id.historyview)
+
+        val browse_button=findViewById<ImageButton>(R.id.browse_button)
+
+        browse_button.setOnClickListener({browseuebungen()})
 
 
 
