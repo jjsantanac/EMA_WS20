@@ -52,6 +52,11 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
         transaction.commit()
     }
 
+    fun OpenBrowseUebungenActivity(){
+        val intent = Intent(this@uebungen, browse_uebungen_a::class.java)
+        startActivity(intent)
+    }
+
     override fun onImageClick(position: Int) {
 
         Toast.makeText(this,"Item $position clicked",Toast.LENGTH_SHORT).show()
@@ -73,7 +78,7 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
 
         val browse_button=findViewById<ImageButton>(R.id.browse_button)
 
-        browse_button.setOnClickListener({browseuebungen()})
+        browse_button.setOnClickListener({OpenBrowseUebungenActivity()})
 
 
 

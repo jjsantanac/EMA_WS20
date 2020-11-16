@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".browse_uebuengen"
-    android:id="@+id/uebungen_browser1"
+    tools:context=".uebungen_kategorien"
     android:background="#404040">
 
     <!-- TODO: Update blank fragment layout -->
-
-
     <TextView
-        android:id="@+id/uebungen_textview"
+        android:id="@+id/oberkoerper_textview"
         android:layout_width="361dp"
         android:layout_height="73dp"
         android:layout_alignParentStart="true"
@@ -21,26 +17,40 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="76dp"
         android:background="@color/white"
-        android:text="TextView"
+        android:text="Oberkörper"
         android:textAlignment="center"
         android:padding="25dp"/>
 
     <TextView
-        android:id="@+id/workouts_textview"
+        android:id="@+id/beine_textview"
         android:layout_width="361dp"
         android:layout_height="73dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="204dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="305dp"
         android:background="@color/white"
         android:padding="25dp"
-        android:text="TextView"
+        android:text="Beine"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/handgelenk_textview"
+        android:layout_width="361dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="185dp"
+        android:background="@color/white"
+        android:padding="25dp"
+        android:text="Handgelenk"
         android:textAlignment="center" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView3"
         android:layout_width="56dp"
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
@@ -50,16 +60,23 @@
         android:src="@drawable/ic_baseline_edit_24" />
 
     <ImageView
-        android:id="@+id/workouts_imageview"
+        android:id="@+id/imageView4"
         android:layout_width="56dp"
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="212dp"
-        android:layout_marginEnd="46dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="50dp"
         android:src="@drawable/ic_baseline_edit_24" />
 
-
-
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="308dp"
+        android:layout_marginEnd="48dp"
+        android:src="@drawable/ic_baseline_edit_24" />
 
 </RelativeLayout>

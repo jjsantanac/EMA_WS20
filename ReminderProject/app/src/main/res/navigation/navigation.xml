@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/browse_uebuengen">
 
+    <fragment
+        android:id="@+id/browse_uebuengen"
+        android:name="com.example.reminderproject.browse_uebuengen"
+        android:label="fragment_browse_uebuengen"
+        tools:layout="@layout/fragment_browse_uebuengen" >
+        <action
+            android:id="@+id/action_browse_uebuengen_to_uebungen_kategorien"
+            app:destination="@id/uebungen_kategorien"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/uebungen_kategorien"
+        android:name="com.example.reminderproject.uebungen_kategorien"
+        android:label="fragment_uebungen_kategorien"
+        tools:layout="@layout/fragment_uebungen_kategorien" >
+        <action
+            android:id="@+id/action_uebungen_kategorien_to_oberkorper_uebungen"
+            app:destination="@id/oberkorper_uebungen" />
+    </fragment>
+    <fragment
+        android:id="@+id/oberkorper_uebungen"
+        android:name="com.example.reminderproject.oberkorper_uebungen"
+        android:label="fragment_oberkorper_uebungen"
+        tools:layout="@layout/fragment_oberkorper_uebungen" >
+        <action
+            android:id="@+id/action_oberkorper_uebungen_to_show_uebung_video"
+            app:destination="@id/show_uebung_video" />
+    </fragment>
+    <fragment
+        android:id="@+id/show_uebung_video"
+        android:name="com.example.reminderproject.show_uebung_video"
+        android:label="fragment_show_uebung_video"
+        tools:layout="@layout/fragment_show_uebung_video" />
 </navigation>
