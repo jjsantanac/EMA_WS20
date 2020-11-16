@@ -33,12 +33,17 @@
         android:label="fragment_oberkorper_uebungen"
         tools:layout="@layout/fragment_oberkorper_uebungen" >
         <action
-            android:id="@+id/action_oberkorper_uebungen_to_show_uebung_video"
-            app:destination="@id/show_uebung_video" />
+            android:id="@+id/action_oberkorper_uebungen_to_demonstrate_uebung"
+            app:destination="@id/demonstrate_uebung" />
     </fragment>
     <fragment
         android:id="@+id/show_uebung_video"
         android:name="com.example.reminderproject.show_uebung_video"
         android:label="fragment_show_uebung_video"
         tools:layout="@layout/fragment_show_uebung_video" />
+    <activity
+        android:id="@+id/demonstrate_uebung"
+        android:name="com.example.reminderproject.demonstrate_uebung"
+        android:label="activity_demonstrate_uebung"
+        tools:layout="@layout/activity_demonstrate_uebung" />
 </navigation>

@@ -7,7 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.MediaController
+import android.widget.TextView
 import android.widget.VideoView
+import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,13 +33,13 @@ class show_uebung_video : Fragment() {
             param2 = it.getString(ARG_PARAM2)
 
 
-
-
-
         }
 
 
     }
+
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,7 +47,7 @@ class show_uebung_video : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        
+
 
         return inflater.inflate(R.layout.fragment_show_uebung_video, container, false)
     }

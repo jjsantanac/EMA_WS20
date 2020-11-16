@@ -1,10 +1,13 @@
 package com.example.reminderproject
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,6 +30,25 @@ class oberkorper_uebungen : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+    }
+
+    fun playVideo(){
+        val intent = Intent(this@oberkorper_uebungen.context, demonstrate_uebung::class.java)
+        startActivity(intent)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val uebungen_button=view.findViewById<TextView>(R.id.oberkoerper1_textview)
+
+        uebungen_button.setOnClickListener {
+            val action=oberkorper_uebungenDirections.actionOberkorperUebungenToDemonstrateUebung()
+            findNavController().navigate(action)
+
+        }
+
+
     }
 
     override fun onCreateView(
