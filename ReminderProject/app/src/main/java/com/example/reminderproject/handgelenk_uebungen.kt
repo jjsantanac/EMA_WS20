@@ -33,7 +33,8 @@ class handgelenk_uebungen : Fragment(R.layout.fragment_handgelenk_uebungen) {
 
 
     fun playVideo(){
-        val action=handgelenk_uebungenDirections.actionHandgelenkUebungenToDemonstrateUebung()
+        val uebung_type="string"
+        val action=handgelenk_uebungenDirections.actionHandgelenkUebungenToDemonstrateUebung(uebung_type)
         findNavController().navigate(action)
     }
 

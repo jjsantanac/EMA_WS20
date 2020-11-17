@@ -19,7 +19,9 @@
         android:background="@color/white"
         android:text="Wrist twist"
         android:textAlignment="center"
-        android:padding="25dp"/>
+        android:paddingTop="25dp"
+        android:fontFamily="@font/custom_font"
+        android:textSize="25dp"/>
 
     <TextView
         android:id="@+id/handgelenk2_textview"
@@ -31,9 +33,11 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="164dp"
         android:background="@color/white"
-        android:padding="25dp"
+        android:paddingTop="25dp"
         android:text="Wrist downward stretch"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:fontFamily="@font/custom_font"
+        android:textSize="25dp"/>
 
     <TextView
         android:id="@+id/handgelenk3_textview"
@@ -45,10 +49,41 @@
         android:layout_marginStart="23dp"
         android:layout_marginTop="261dp"
         android:background="@color/white"
-        android:padding="25dp"
+        android:paddingTop="25dp"
         android:text="Wrist upward stretch"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:fontFamily="@font/custom_font"
+        android:textSize="25dp"/>
 
+    <ImageView
+        android:id="@+id/handgelenk1_imageview"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="269dp"
+        android:layout_marginEnd="38dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+    <ImageView
+        android:id="@+id/handgelenk2_imageview"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+    <ImageView
+        android:id="@+id/handgelenk3_imageview"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="171dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
 
 </RelativeLayout>

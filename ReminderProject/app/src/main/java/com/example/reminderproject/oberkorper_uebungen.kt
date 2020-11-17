@@ -32,8 +32,9 @@ class oberkorper_uebungen : Fragment() {
         }
     }
 
-    fun playVideo(){
-        val action=oberkorper_uebungenDirections.actionOberkorperUebungenToDemonstrateUebung()
+    fun playVideo(Button_name:String){
+        val uebung_type=Button_name
+        val action=oberkorper_uebungenDirections.actionOberkorperUebungenToDemonstrateUebung(uebung_type)
         findNavController().navigate(action)
     }
 
@@ -47,12 +48,12 @@ class oberkorper_uebungen : Fragment() {
         val uebung5button=view.findViewById<TextView>(R.id.oberkoerper5_textview)
         val uebung6button=view.findViewById<TextView>(R.id.oberkoerper6_textview)
 
-        uebungbutton.setOnClickListener {playVideo()}
-        uebung2button.setOnClickListener {playVideo()}
-        uebung3button.setOnClickListener {playVideo()}
-        uebung4button.setOnClickListener {playVideo()}
-        uebung5button.setOnClickListener {playVideo()}
-        uebung6button.setOnClickListener {playVideo()}
+        uebungbutton.setOnClickListener {playVideo(uebungbutton.text.toString())}
+        uebung2button.setOnClickListener {playVideo(uebung2button.text.toString())}
+        uebung3button.setOnClickListener {playVideo(uebung3button.text.toString())}
+        uebung4button.setOnClickListener {playVideo(uebung4button.text.toString())}
+        uebung5button.setOnClickListener {playVideo(uebung5button.text.toString())}
+        uebung6button.setOnClickListener {playVideo(uebung6button.text.toString())}
 
 
 

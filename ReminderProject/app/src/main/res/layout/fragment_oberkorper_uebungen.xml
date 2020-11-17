@@ -19,7 +19,9 @@
         android:background="@color/white"
         android:text="Chest stretch"
         android:textAlignment="center"
-        android:padding="25dp"/>
+        android:paddingTop="25dp"
+        android:fontFamily="@font/custom_font"
+        android:textSize="25dp"/>
 
     <TextView
         android:id="@+id/oberkoerper2_textview"
@@ -31,9 +33,11 @@
         android:layout_marginStart="22dp"
         android:layout_marginTop="364dp"
         android:background="@color/white"
-        android:padding="25dp"
+        android:paddingTop="25dp"
         android:text="Shouldershrug"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:fontFamily="@font/custom_font"
+        android:textSize="25dp"/>
 
     <TextView
         android:id="@+id/oberkoerper3_textview"
@@ -45,9 +49,11 @@
         android:layout_marginStart="23dp"
         android:layout_marginTop="261dp"
         android:background="@color/white"
-        android:padding="25dp"
+        android:paddingTop="25dp"
         android:text="Upper back stretch"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:fontFamily="@font/custom_font"
+        android:textSize="25dp"/>
 
     <TextView
         android:id="@+id/oberkoerper4_textview"
@@ -59,9 +65,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="168dp"
         android:background="@color/white"
-        android:padding="25dp"
+        android:paddingTop="25dp"
         android:text="Torso twist"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:fontFamily="@font/custom_font"
+        android:textSize="25dp"/>
 
     <TextView
         android:id="@+id/oberkoerper5_textview"
@@ -73,9 +81,11 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="459dp"
         android:background="@color/white"
-        android:padding="25dp"
+        android:paddingTop="25dp"
         android:text="Neck stretch"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:fontFamily="@font/custom_font"
+        android:textSize="25dp"/>
 
     <TextView
         android:id="@+id/oberkoerper6_textview"
@@ -87,8 +97,70 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="560dp"
         android:background="@color/white"
-        android:padding="25dp"
+        android:paddingTop="25dp"
         android:text="Wall slides"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:fontFamily="@font/custom_font"
+        android:textSize="25dp"/>
+
+    <ImageView
+        android:id="@+id/oberkoerper6_imageview"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="273dp"
+        android:layout_marginEnd="38dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+    <ImageView
+        android:id="@+id/oberkoerper1_imageview"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="371dp"
+        android:layout_marginEnd="38dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+    <ImageView
+        android:id="@+id/oberkoerper2_imageview"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="467dp"
+        android:layout_marginEnd="38dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+    <ImageView
+        android:id="@+id/oberkoerper3_imageview"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="567dp"
+        android:layout_marginEnd="36dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+    <ImageView
+        android:id="@+id/oberkoerper4_imageview"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="182dp"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+    <ImageView
+        android:id="@+id/oberkoerper5_imageview"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="42dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
 </RelativeLayout>

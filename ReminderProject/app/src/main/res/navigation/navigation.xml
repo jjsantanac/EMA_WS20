@@ -25,13 +25,25 @@
         tools:layout="@layout/fragment_uebungen_kategorien" >
         <action
             android:id="@+id/action_uebungen_kategorien_to_oberkorper_uebungen"
-            app:destination="@id/oberkorper_uebungen" />
+            app:destination="@id/oberkorper_uebungen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_uebungen_kategorien_to_handgelenk_uebungen"
-            app:destination="@id/handgelenk_uebungen" />
+            app:destination="@id/handgelenk_uebungen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_uebungen_kategorien_to_bein_uebungen"
-            app:destination="@id/bein_uebungen" />
+            app:destination="@id/bein_uebungen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/oberkorper_uebungen"
@@ -40,18 +52,21 @@
         tools:layout="@layout/fragment_oberkorper_uebungen" >
         <action
             android:id="@+id/action_oberkorper_uebungen_to_demonstrate_uebung"
-            app:destination="@id/demonstrate_uebung" />
+            app:destination="@id/demonstrate_uebung"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
-    <fragment
-        android:id="@+id/show_uebung_video"
-        android:name="com.example.reminderproject.show_uebung_video"
-        android:label="fragment_show_uebung_video"
-        tools:layout="@layout/fragment_show_uebung_video" />
     <activity
         android:id="@+id/demonstrate_uebung"
         android:name="com.example.reminderproject.demonstrate_uebung"
         android:label="activity_demonstrate_uebung"
-        tools:layout="@layout/activity_demonstrate_uebung" />
+        tools:layout="@layout/activity_demonstrate_uebung" >
+        <argument
+            android:name="uebung_type"
+            app:argType="string" />
+    </activity>
     <fragment
         android:id="@+id/handgelenk_uebungen"
         android:name="com.example.reminderproject.handgelenk_uebungen"
@@ -59,7 +74,11 @@
         tools:layout="@layout/fragment_handgelenk_uebungen" >
         <action
             android:id="@+id/action_handgelenk_uebungen_to_demonstrate_uebung"
-            app:destination="@id/demonstrate_uebung" />
+            app:destination="@id/demonstrate_uebung"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/bein_uebungen"
@@ -68,6 +87,10 @@
         tools:layout="@layout/fragment_bein_uebungen" >
         <action
             android:id="@+id/action_bein_uebungen_to_demonstrate_uebung"
-            app:destination="@id/demonstrate_uebung" />
+            app:destination="@id/demonstrate_uebung"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 </navigation>

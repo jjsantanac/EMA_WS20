@@ -31,8 +31,9 @@ class bein_uebungen : Fragment(R.layout.fragment_bein_uebungen) {
         }
     }
 
-    fun playVideo(){
-        val action=bein_uebungenDirections.actionBeinUebungenToDemonstrateUebung()
+    fun playVideo(Button_name:String){
+        val uebung_type=Button_name
+        val action=bein_uebungenDirections.actionBeinUebungenToDemonstrateUebung(uebung_type)
         findNavController().navigate(action)
     }
 
@@ -46,11 +47,11 @@ class bein_uebungen : Fragment(R.layout.fragment_bein_uebungen) {
         val uebung5button=view.findViewById<TextView>(R.id.beine5_textview)
 
 
-        uebungbutton.setOnClickListener {playVideo()}
-        uebung2button.setOnClickListener {playVideo()}
-        uebung3button.setOnClickListener {playVideo()}
-        uebung4button.setOnClickListener {playVideo()}
-        uebung5button.setOnClickListener {playVideo()}
+        uebungbutton.setOnClickListener {playVideo(uebungbutton.text.toString())}
+        uebung2button.setOnClickListener {playVideo(uebungbutton.text.toString())}
+        uebung3button.setOnClickListener {playVideo(uebungbutton.text.toString())}
+        uebung4button.setOnClickListener {playVideo(uebungbutton.text.toString())}
+        uebung5button.setOnClickListener {playVideo(uebungbutton.text.toString())}
 
 
     }
