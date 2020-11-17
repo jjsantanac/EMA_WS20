@@ -76,7 +76,8 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
 
         val historyview=findViewById<RecyclerView>(R.id.historyview)
 
-        val browse_button=findViewById<ImageButton>(R.id.browse_button)
+        val browse_button=findViewById<Button>(R.id.browse_button)
+
 
         browse_button.setOnClickListener({OpenBrowseUebungenActivity()})
 
