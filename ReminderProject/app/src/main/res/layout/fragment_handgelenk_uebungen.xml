@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".handgelenk_uebungen"
+    android:background="#404040">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/handgelenk1_textview"
+        android:layout_width="361dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="76dp"
+        android:background="@color/white"
+        android:text="Wrist twist"
+        android:textAlignment="center"
+        android:padding="25dp"/>
+
+    <TextView
+        android:id="@+id/handgelenk2_textview"
+        android:layout_width="361dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="164dp"
+        android:background="@color/white"
+        android:padding="25dp"
+        android:text="Wrist downward stretch"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/handgelenk3_textview"
+        android:layout_width="361dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="261dp"
+        android:background="@color/white"
+        android:padding="25dp"
+        android:text="Wrist upward stretch"
+        android:textAlignment="center" />
+
+
+
+</RelativeLayout>

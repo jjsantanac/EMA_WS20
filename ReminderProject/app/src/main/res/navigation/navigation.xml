@@ -26,6 +26,12 @@
         <action
             android:id="@+id/action_uebungen_kategorien_to_oberkorper_uebungen"
             app:destination="@id/oberkorper_uebungen" />
+        <action
+            android:id="@+id/action_uebungen_kategorien_to_handgelenk_uebungen"
+            app:destination="@id/handgelenk_uebungen" />
+        <action
+            android:id="@+id/action_uebungen_kategorien_to_bein_uebungen"
+            app:destination="@id/bein_uebungen" />
     </fragment>
     <fragment
         android:id="@+id/oberkorper_uebungen"
@@ -46,4 +52,22 @@
         android:name="com.example.reminderproject.demonstrate_uebung"
         android:label="activity_demonstrate_uebung"
         tools:layout="@layout/activity_demonstrate_uebung" />
+    <fragment
+        android:id="@+id/handgelenk_uebungen"
+        android:name="com.example.reminderproject.handgelenk_uebungen"
+        android:label="fragment_handgelenk_uebungen"
+        tools:layout="@layout/fragment_handgelenk_uebungen" >
+        <action
+            android:id="@+id/action_handgelenk_uebungen_to_demonstrate_uebung"
+            app:destination="@id/demonstrate_uebung" />
+    </fragment>
+    <fragment
+        android:id="@+id/bein_uebungen"
+        android:name="com.example.reminderproject.bein_uebungen"
+        android:label="fragment_bein_uebungen"
+        tools:layout="@layout/fragment_bein_uebungen" >
+        <action
+            android:id="@+id/action_bein_uebungen_to_demonstrate_uebung"
+            app:destination="@id/demonstrate_uebung" />
+    </fragment>
 </navigation>

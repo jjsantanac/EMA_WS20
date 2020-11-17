@@ -43,9 +43,23 @@ class uebungen_kategorien : Fragment(R.layout.fragment_uebungen_kategorien) {
         super.onViewCreated(view, savedInstanceState)
 
         val uebungen_button=view.findViewById<TextView>(R.id.oberkoerper_textview)
+        val handgelenkuebungen=view.findViewById<TextView>(R.id.handgelenk_textview)
+        val beinuebungen=view.findViewById<TextView>(R.id.beine_textview)
 
         uebungen_button.setOnClickListener {
             val action=uebungen_kategorienDirections.actionUebungenKategorienToOberkorperUebungen()
+            findNavController().navigate(action)
+
+        }
+
+        handgelenkuebungen.setOnClickListener {
+            val action=uebungen_kategorienDirections.actionUebungenKategorienToHandgelenkUebungen()
+            findNavController().navigate(action)
+
+        }
+
+        beinuebungen.setOnClickListener {
+            val action=uebungen_kategorienDirections.actionUebungenKategorienToBeinUebungen()
             findNavController().navigate(action)
 
         }

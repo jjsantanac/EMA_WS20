@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bein_uebungen"
+    android:background="#404040">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/beine1_textview"
+        android:layout_width="361dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="76dp"
+        android:background="@color/white"
+        android:text="Hip flexor stretch"
+        android:textAlignment="center"
+        android:padding="25dp"/>
+
+    <TextView
+        android:id="@+id/beine2_textview"
+        android:layout_width="361dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="364dp"
+        android:background="@color/white"
+        android:padding="25dp"
+        android:text="Glute stretch"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/beine3_textview"
+        android:layout_width="361dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="261dp"
+        android:background="@color/white"
+        android:padding="25dp"
+        android:text="Thigh stretch"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/beine4_textview"
+        android:layout_width="361dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="168dp"
+        android:background="@color/white"
+        android:padding="25dp"
+        android:text="Hamstring stretch"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/beine5_textview"
+        android:layout_width="361dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="459dp"
+        android:background="@color/white"
+        android:padding="25dp"
+        android:text="Thigh/Hip flexor stretch"
+        android:textAlignment="center" />
+
+
+
+</RelativeLayout>

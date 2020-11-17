@@ -1,6 +1,5 @@
 package com.example.reminderproject
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,10 +15,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [oberkorper_uebungen.newInstance] factory method to
+ * Use the [handgelenk_uebungen.newInstance] factory method to
  * create an instance of this fragment.
  */
-class oberkorper_uebungen : Fragment() {
+class handgelenk_uebungen : Fragment(R.layout.fragment_handgelenk_uebungen) {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -32,28 +31,23 @@ class oberkorper_uebungen : Fragment() {
         }
     }
 
+
     fun playVideo(){
-        val action=oberkorper_uebungenDirections.actionOberkorperUebungenToDemonstrateUebung()
+        val action=handgelenk_uebungenDirections.actionHandgelenkUebungenToDemonstrateUebung()
         findNavController().navigate(action)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val uebungbutton=view.findViewById<TextView>(R.id.oberkoerper1_textview)
-        val uebung2button=view.findViewById<TextView>(R.id.oberkoerper2_textview)
-        val uebung3button=view.findViewById<TextView>(R.id.oberkoerper3_textview)
-        val uebung4button=view.findViewById<TextView>(R.id.oberkoerper4_textview)
-        val uebung5button=view.findViewById<TextView>(R.id.oberkoerper5_textview)
-        val uebung6button=view.findViewById<TextView>(R.id.oberkoerper6_textview)
+        val uebungbutton=view.findViewById<TextView>(R.id.handgelenk1_textview)
+        val uebung2button=view.findViewById<TextView>(R.id.handgelenk2_textview)
+        val uebung3button=view.findViewById<TextView>(R.id.handgelenk3_textview)
+
 
         uebungbutton.setOnClickListener {playVideo()}
         uebung2button.setOnClickListener {playVideo()}
         uebung3button.setOnClickListener {playVideo()}
-        uebung4button.setOnClickListener {playVideo()}
-        uebung5button.setOnClickListener {playVideo()}
-        uebung6button.setOnClickListener {playVideo()}
-
 
 
     }
@@ -63,7 +57,7 @@ class oberkorper_uebungen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_oberkorper_uebungen, container, false)
+        return inflater.inflate(R.layout.fragment_handgelenk_uebungen, container, false)
     }
 
     companion object {
@@ -73,12 +67,12 @@ class oberkorper_uebungen : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment oberkorper_uebungen.
+         * @return A new instance of fragment handgelenk_uebungen.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            oberkorper_uebungen().apply {
+            handgelenk_uebungen().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
