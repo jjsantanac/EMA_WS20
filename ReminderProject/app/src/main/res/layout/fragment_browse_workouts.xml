@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".browse_uebuengen"
-    android:id="@+id/uebungen_browser1"
+    tools:context=".browse_workouts"
     android:background="#404040">
 
     <!-- TODO: Update blank fragment layout -->
-
-
     <TextView
-        android:id="@+id/uebungen_textview"
+        android:id="@+id/workout1_textview"
         android:layout_width="361dp"
         android:layout_height="73dp"
         android:layout_alignParentStart="true"
@@ -21,14 +17,14 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="76dp"
         android:background="@color/white"
-        android:text="Übungen"
+        android:text="Workout 1"
         android:textAlignment="center"
         android:paddingTop="25dp"
         android:fontFamily="@font/custom_font"
         android:textSize="25dp"/>
 
     <TextView
-        android:id="@+id/workouts_textview"
+        android:id="@+id/workout2_textview"
         android:layout_width="361dp"
         android:layout_height="73dp"
         android:layout_alignParentStart="true"
@@ -38,13 +34,13 @@
         android:layout_marginTop="204dp"
         android:background="@color/white"
         android:paddingTop="25dp"
-        android:text="Workouts"
+        android:text="Workout 2"
         android:textAlignment="center"
         android:fontFamily="@font/custom_font"
         android:textSize="25dp"/>
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView6"
         android:layout_width="56dp"
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
@@ -63,5 +59,31 @@
         android:layout_marginEnd="33dp"
         android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
+    <TextView
+        android:id="@+id/workout3_textview"
+        android:layout_width="361dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="321dp"
+        android:background="@color/white"
+        android:fontFamily="@font/custom_font"
+        android:paddingTop="25dp"
+        android:text="Workout 3"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="326dp"
+        android:layout_marginEnd="33dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
 </RelativeLayout>

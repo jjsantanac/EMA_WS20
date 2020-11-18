@@ -15,10 +15,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [browse_uebuengen.newInstance] factory method to
+ * Use the [browse_workouts.newInstance] factory method to
  * create an instance of this fragment.
  */
-class browse_uebuengen : Fragment(R.layout.fragment_browse_uebuengen) {
+class browse_workouts : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -31,34 +31,35 @@ class browse_uebuengen : Fragment(R.layout.fragment_browse_uebuengen) {
         }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val uebungen_button=view.findViewById<TextView>(R.id.uebungen_textview)
-        val workout_button=view.findViewById<TextView>(R.id.workouts_textview)
-
-        uebungen_button.setOnClickListener {
-            val action=browse_uebuengenDirections.actionBrowseUebuengenToUebungenKategorien()
-            findNavController().navigate(action)
-
-        }
-
-        workout_button.setOnClickListener {
-            val action=browse_uebuengenDirections.actionBrowseUebuengenToBrowseWorkouts()
-            findNavController().navigate(action)
-        }
-
-
-    }
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_browse_uebuengen, container, false)
+        return inflater.inflate(R.layout.fragment_browse_workouts, container, false)
+    }
+
+    private fun selectWorkout(workout_num:String){
+
+        val action=browse_workoutsDirections.actionBrowseWorkoutsToWorkoutSelection(workout_num)
+        findNavController().navigate(action)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val workoutbutton=view.findViewById<TextView>(R.id.workout1_textview)
+        val workout2button=view.findViewById<TextView>(R.id.workout2_textview)
+        val workout3button=view.findViewById<TextView>(R.id.workout3_textview)
+
+        workoutbutton.setOnClickListener{selectWorkout(workoutbutton.text.toString())}
+        workout2button.setOnClickListener{selectWorkout(workout2button.text.toString())}
+        workout3button.setOnClickListener{selectWorkout(workout3button.text.toString())}
+
+
+
+
+
     }
 
     companion object {
@@ -68,12 +69,12 @@ class browse_uebuengen : Fragment(R.layout.fragment_browse_uebuengen) {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment browse_uebuengen.
+         * @return A new instance of fragment browse_workouts.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            browse_uebuengen().apply {
+            browse_workouts().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

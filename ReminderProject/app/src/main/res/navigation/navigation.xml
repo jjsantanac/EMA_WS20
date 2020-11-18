@@ -17,6 +17,13 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_browse_uebuengen_to_browse_workouts"
+            app:destination="@id/browse_workouts"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/uebungen_kategorien"
@@ -87,6 +94,35 @@
         tools:layout="@layout/fragment_bein_uebungen" >
         <action
             android:id="@+id/action_bein_uebungen_to_demonstrate_uebung"
+            app:destination="@id/demonstrate_uebung"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/browse_workouts"
+        android:name="com.example.reminderproject.browse_workouts"
+        android:label="fragment_browse_workouts"
+        tools:layout="@layout/fragment_browse_workouts" >
+        <action
+            android:id="@+id/action_browse_workouts_to_workout_selection"
+            app:destination="@id/workout_selection"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/workout_selection"
+        android:name="com.example.reminderproject.workout_selection"
+        android:label="fragment_workout_selection"
+        tools:layout="@layout/fragment_workout_selection" >
+        <argument
+            android:name="workoutnumber"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_workout_selection_to_demonstrate_uebung"
             app:destination="@id/demonstrate_uebung"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
