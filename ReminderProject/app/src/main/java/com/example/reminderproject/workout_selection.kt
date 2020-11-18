@@ -91,7 +91,7 @@ class workout_selection : Fragment() {
         uebung4button.setOnClickListener { playVideo(uebung4button.text.toString()) }
         uebung5button.setOnClickListener { playVideo(uebung5button.text.toString()) }
 
-        
+
     }
 
     companion object {
