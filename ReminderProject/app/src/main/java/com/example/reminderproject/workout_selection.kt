@@ -64,24 +64,24 @@ class workout_selection : Fragment() {
         when (work_selection){
             "Workout 1" -> {
                 uebungbutton.text = "Chest stretch"
-                uebung2button.text = "Torso twist"
-                uebung3button.text="Shouldershrug"
-                uebung4button.text="Upper back stretch"
-                uebung5button.text="Wrist twist"
+                uebung2button.text = "Upper back stretch"
+                uebung3button.text="Wrist twist"
+                uebung4button.text="Thigh stretch"
+                uebung5button.text="Hamstring stretch"
             }
             "Workout 2" -> {
-                uebungbutton.text = "1"
-                uebung2button.text = "2"
-                uebung3button.text="3"
-                uebung4button.text="Upper back stretch"
-                uebung5button.text="Wrist twist"
+                uebungbutton.text = "Shouldershrug"
+                uebung2button.text = "Neck stretch"
+                uebung3button.text="Wrist twist"
+                uebung4button.text="Thigh/Hip flexor stretch"
+                uebung5button.text="Glute stretch"
             }
             "Workout 3" -> {
-                uebungbutton.text = "4"
-                uebung2button.text = "6"
-                uebung3button.text="222"
-                uebung4button.text="Upper 323 stretch"
-                uebung5button.text="Wrist twist"
+                uebungbutton.text = "Wall slides"
+                uebung2button.text = "Torso twist"
+                uebung3button.text="Wrist downward stretch"
+                uebung4button.text="Wrist upward stretch"
+                uebung5button.text="Hip flexor stretch"
             }
         }
 
@@ -91,12 +91,7 @@ class workout_selection : Fragment() {
         uebung4button.setOnClickListener { playVideo(uebung4button.text.toString()) }
         uebung5button.setOnClickListener { playVideo(uebung5button.text.toString()) }
 
-
-
-
-
-
-
+        
     }
 
     companion object {

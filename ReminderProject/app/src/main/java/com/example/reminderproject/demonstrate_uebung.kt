@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.MediaController
+import android.widget.TextView
 import android.widget.VideoView
 import androidx.navigation.navArgs
 
@@ -17,15 +18,28 @@ class demonstrate_uebung : AppCompatActivity() {
         val uebung_name=args.uebungType
 
         val video=findViewById<VideoView>(R.id.videoView2)
+        val description=findViewById<TextView>(R.id.description_textView)
 
         val mediacontroller=MediaController(this)
         val source:Uri
         when (uebung_name){
 
-            "Chest stretch" -> source= Uri.parse("android.resource://$packageName/${R.raw.cheststretch}")
-            "Torso twist" -> source= Uri.parse("android.resource://$packageName/${R.raw.torsotwist}")
-            "Upper back stretch" -> source= Uri.parse("android.resource://$packageName/${R.raw.upperbackstretch}")
-            "Shouldershrug" -> source= Uri.parse("android.resource://$packageName/${R.raw.shouldershrug}")
+            "Chest stretch" -> {
+                source = Uri.parse("android.resource://$packageName/${R.raw.cheststretch}")
+                description.text=getString(R.string.chest_stretch)
+            }
+            "Torso twist" -> {
+                source =
+                    Uri.parse("android.resource://$packageName/${R.raw.torsotwist}")
+            }
+            "Upper back stretch" -> {
+                source =
+                    Uri.parse("android.resource://$packageName/${R.raw.upperbackstretch}")
+            }
+            "Shouldershrug" -> {
+                source =
+                    Uri.parse("android.resource://$packageName/${R.raw.shouldershrug}")
+            }
             else -> {
                 source= Uri.parse("android.resource://$packageName/${R.raw.cheststretch}")
             }
