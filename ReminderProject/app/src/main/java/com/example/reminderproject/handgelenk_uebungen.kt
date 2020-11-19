@@ -32,9 +32,9 @@ class handgelenk_uebungen : Fragment(R.layout.fragment_handgelenk_uebungen) {
     }
 
 
-    fun playVideo(){
-        val uebung_type="string"
-        val action=handgelenk_uebungenDirections.actionHandgelenkUebungenToDemonstrateUebung(uebung_type)
+    fun playVideo(Button_name:String){
+
+        val action=handgelenk_uebungenDirections.actionHandgelenkUebungenToDemonstrateUebung(Button_name)
         findNavController().navigate(action)
     }
 
@@ -46,9 +46,10 @@ class handgelenk_uebungen : Fragment(R.layout.fragment_handgelenk_uebungen) {
         val uebung3button=view.findViewById<TextView>(R.id.handgelenk3_textview)
 
 
-        uebungbutton.setOnClickListener {playVideo()}
-        uebung2button.setOnClickListener {playVideo()}
-        uebung3button.setOnClickListener {playVideo()}
+
+        uebungbutton.setOnClickListener {playVideo(uebungbutton.text.toString())}
+        uebung2button.setOnClickListener {playVideo(uebung2button.text.toString())}
+        uebung3button.setOnClickListener {playVideo(uebung3button.text.toString())}
 
 
     }

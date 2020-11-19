@@ -4,8 +4,98 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="chest_stretch">
-        Line 1 \n
-        Line 2 \n
-        Line 3
+        Hände hinter dem Rücken ineinanderlegen\n
+        Hände zeigen nach unten\n
+        Brüst rausdrücken\n
+        Kein Hohlkreuz\n
+        5 Sekunden halten, mehrfahr wiederholen
     </string>
+
+    <string name="torso_twist">
+        Gerade auf dem Stuhl sitzen\n
+        Oberkörper und Kopf nach links/rechts eindrehen\n
+        Über die Schulter schauen\n
+        10 Sekunden halten, mehrfach wiederholen
+    </string>
+
+    <string name="upper_back">
+        Hände überkreuz zusammen legen, Arme austrecken\n
+        Oberkörper leicht nach vorne beugen\n
+        Kopf zwischen Arme hängen\n
+        15 Sekunden halten, mehrfach wiederholen
+    </string>
+
+    <string name="shouldershrug">
+        Schultern nach oben Richtung Ohren ziehen\n
+        Kurz und intensiv halten, mehrfach wiederholen
+    </string>
+
+    <string name="wristdownward">
+        Finger zeigen auf Boden\n
+        Mit anderer Hand vorsichtig Druck auf den Handrücken ausüben\n
+        15 Sekunden halten, 2 mal wiederholen auf beide Seiten
+    </string>
+
+    <string name="neck">
+        Oberkörper nicht bewegen\n
+        Kopf Richtung linke/rechte Schulter neigen\n
+        15 Sekunden halten, 2 mal wiederholen auf beiden Seiten
+    </string>
+
+    <string name="glute">
+        Beine überschlagen\n
+        Kein Hohlkreuz\n
+        Körper nach vorne zum Bein bewegen\n
+        15 Sekunden halten, 2 mal wiederholen auf beiden Seiten
+    </string>
+
+    <string name="wristupward">
+        Finger zeigen nach oben\n
+        Mit anderer Hand vorsichtig Druck auf die Fingerinnenseite ausüben\n
+        15 Sekudnen halten, 2 mal wiederholen auf beiden Seiten
+    </string>
+
+    <string name="hamstring">
+        Beine gerade\n
+        Oberkörper nach vorne beugen\n
+        Versuchen Hände auf dem Boden abzulegen\n
+        15 Sekunden halten, 2 mal wiederholen
+    </string>
+
+    <string name="thigh">
+        Nach hinten lehnen\n
+        Im Sitzen das Knie zur Brust ziehen\n
+        15 Sekunden halten, 2 mal wiederholen auf beiden Seiten
+    </string>
+
+    <string name="hipthigh">
+        Beine etwas weiter als hüftbreit spreizen\n
+        Arme entspannt auf Beine ablegen\n
+        Mit Oberkörper nach vorne neigen\n
+        15 Sekunden halten, 2 mal wiederholen auf beiden Seiten
+    </string>
+
+    <string name="wallslide">
+        Rücken press an die Wand\n
+        Beine ein Stück von der Wand weg\n
+        Arme bleiben in Kontakt mit der Wand\n
+        15 Ausführungen, 2 mal wiederholen
+    </string>
+
+    <string name="wristtwist">
+        Hände üben aufeinander Druck aus\n
+        15 Sekunden in beide Richtungen jeweils, 2 mal wiederholen
+    </string>
+
+    <string name="hipflexor">
+        Ein Bein im 90 Grad Winkel einbeugen\n
+        Gewicht auf dieses Bein verlagern\n
+        Knie auf Boden ablegen\
+        Oberkörper gerade und Brust raus\n
+        Dehnung spürbar im Hüftbereich\n
+        20 Sekunden halten auf beiden Seiten
+    </string>
+
+    
+
 </resources>

@@ -48,10 +48,10 @@ class bein_uebungen : Fragment(R.layout.fragment_bein_uebungen) {
 
 
         uebungbutton.setOnClickListener {playVideo(uebungbutton.text.toString())}
-        uebung2button.setOnClickListener {playVideo(uebungbutton.text.toString())}
-        uebung3button.setOnClickListener {playVideo(uebungbutton.text.toString())}
-        uebung4button.setOnClickListener {playVideo(uebungbutton.text.toString())}
-        uebung5button.setOnClickListener {playVideo(uebungbutton.text.toString())}
+        uebung2button.setOnClickListener {playVideo(uebung2button.text.toString())}
+        uebung3button.setOnClickListener {playVideo(uebung3button.text.toString())}
+        uebung4button.setOnClickListener {playVideo(uebung4button.text.toString())}
+        uebung5button.setOnClickListener {playVideo(uebung5button.text.toString())}
 
 
     }
