@@ -15,8 +15,19 @@ import androidx.core.app.NotificationManagerCompat
 
 class MainActivity : AppCompatActivity() {
 
-    private val channel_id = "channel_id_example_01"
-    private val notificationId = 101
+
+
+    val timer = object : CountDownTimer(10000, 1000) {
+        override fun onTick(millisUntilFinished: Long) {}
+
+        override fun onFinish() {
+            sendNotification("101")
+            sendNotification("102")
+            sendNotification("103")
+            this.start()
+        }
+
+    }
 
     public lateinit var userinfo: settings.User
 
@@ -57,30 +68,33 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigation.setOnNavigationItemSelectedListener(switchActivity)
 
-        createNotificationChannel()
+        createNotificationChannel("bewegung","101")
+        createNotificationChannel("haltung","102")
+        createNotificationChannel("trinken","103")
 
         val button_notify = findViewById<Button>(R.id.button_notification)
         button_notify.setOnClickListener {
-            button_notify.text= "On"
-            val timer = object : CountDownTimer(10000, 1000) {
-                override fun onTick(millisUntilFinished: Long) {}
-
-                override fun onFinish() {
-                    sendNotification()
-                    button_notify.text="Off"
-                }
+            val button_status = button_notify.text.toString()
+            if(button_status=="ON"){
+                button_notify.text="OFF"
+                timer.cancel()
             }
-            timer.start()
+            else{
+                button_notify.text="ON"
+                timer.start()
+            }
         }
-
-
     }
 
+    lateinit var channel_id:String
+    var notificationId=100
 
-    private fun createNotificationChannel() {
+    private fun createNotificationChannel(channel_name:String,channelid:String) {
+         channel_id =channelid
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val name = "MOVE THAT ASS"
-            val descriptionText = "Ich meins ernst du sau"
+            val name = channel_name
+            val descriptionText = "Das hast du noch zu tun"
             val importance = NotificationManager.IMPORTANCE_DEFAULT
             val channel = NotificationChannel(channel_id, name, importance).apply {
                 description = descriptionText
@@ -92,11 +106,31 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun sendNotification() {
-        val builder = NotificationCompat.Builder(this, channel_id)
+    private fun sendNotification(channelid:String) {
+        var title="hallo"
+        var content="hallo"
+
+        when(channelid){
+            "101" ->{
+                title=getString(R.string.bewegungs_title)
+                content=getString(R.string.bewegungs_content)
+                notificationId=101
+            }
+            "102" ->{
+                title=getString(R.string.haltung_title)
+                content=getString(R.string.haltung_content)
+                notificationId=102
+            }
+            "103" ->{
+                title=getString(R.string.trinken_title)
+                content=getString(R.string.trinken_content)
+                notificationId=103
+            }
+        }
+        val builder = NotificationCompat.Builder(this, channelid)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
-            .setContentTitle("Example Title")
-            .setContentText("Example Description")
+            .setContentTitle(title)
+            .setContentText(content)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
         with(NotificationManagerCompat.from(this)) {

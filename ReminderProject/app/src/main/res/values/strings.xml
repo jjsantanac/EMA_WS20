@@ -96,6 +96,26 @@
         20 Sekunden halten auf beiden Seiten
     </string>
 
+    <string name="haltung_title">
+        Haltungserinnerung
+    </string>
+    <string name="haltung_content">
+        Versuchen Sie sich für 5 Minuten\n
+        aufrecht hinzusetzen
+    </string>
+    <string name="trinken_title">
+        Genug Wasser getrunken?
+    </string>
+    <string name="trinken_content">
+        Haben Sie heute schon genug getrunken
+    </string>
+    <string name="bewegungs_title">
+        Steh-Erinnerung
+    </string>
+    <string name="bewegungs_content">
+        Vertreten Sie sich die Beine!
+    </string>
+
 
 
 </resources>
