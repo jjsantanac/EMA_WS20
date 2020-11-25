@@ -17,15 +17,35 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    val timer = object : CountDownTimer(10000, 1000) {
+    val timer_move = object : CountDownTimer(10000, 1000) {
         override fun onTick(millisUntilFinished: Long) {}
 
         override fun onFinish() {
             sendNotification("101")
+            this.start()
+        }
+
+
+    }
+    val timer_posture = object : CountDownTimer(10000, 1000) {
+        override fun onTick(millisUntilFinished: Long) {}
+
+        override fun onFinish() {
             sendNotification("102")
+
+            this.start()
+        }
+
+
+    }
+    val timer_drink = object : CountDownTimer(10000, 1000) {
+        override fun onTick(millisUntilFinished: Long) {}
+
+        override fun onFinish() {
             sendNotification("103")
             this.start()
         }
+
 
     }
 
@@ -44,12 +64,15 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.customize -> {
                 val intent = Intent(this@MainActivity, customize::class.java)
+                intent.putExtra("user", userinfo)
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.uebungen -> {
                 val intent = Intent(this@MainActivity, uebungen::class.java)
+                intent.putExtra("user", userinfo)
                 startActivity(intent)
+
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -60,8 +83,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        userinfo = settings.User(name = "Julian")
+        if(userinfo==null){
+            userinfo = settings.User(name = "Julian")
+        }
+        userinfo=intent.getSerializableExtra("user") as settings.User
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.botom_navigation)
         bottomNavigation.selectedItemId = R.id.homescreen
@@ -77,11 +102,21 @@ class MainActivity : AppCompatActivity() {
             val button_status = button_notify.text.toString()
             if(button_status=="ON"){
                 button_notify.text="OFF"
-                timer.cancel()
+                timer_move.cancel()
+                timer_drink.cancel()
+                timer_posture.cancel()
             }
             else{
                 button_notify.text="ON"
-                timer.start()
+                if(userinfo.move){
+                    timer_move.start()
+                }
+                if(userinfo.drink){
+                    timer_drink.start()
+                }
+                if(userinfo.posture){
+                    timer_posture.start()
+                }
             }
         }
     }

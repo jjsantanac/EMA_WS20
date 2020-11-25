@@ -18,6 +18,9 @@ public class settings : AppCompatActivity() {
         var age:Int=0
         var weight:Int=0
         var height:Int=0
+        var move:Boolean=true
+        var posture:Boolean=true
+        var drink:Boolean=true
     }
 
     lateinit var user_info:User
