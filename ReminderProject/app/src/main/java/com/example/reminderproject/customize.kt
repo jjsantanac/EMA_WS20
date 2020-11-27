@@ -4,10 +4,14 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.widget.CheckBox
 import android.widget.CompoundButton
 import android.widget.RadioGroup
+import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
+
+
 
 class customize : AppCompatActivity() {
 
@@ -67,6 +71,8 @@ class customize : AppCompatActivity() {
             editor.apply {
                 putBoolean("movement_reminder",userinfo.move)
             }.apply()
+            Toast.makeText(this,"Change applied when reminders are reactivated ",Toast.LENGTH_SHORT).show()
+
         }
         drink_cb.setOnCheckedChangeListener { buttonView, isChecked ->
             userinfo.drink = isChecked
@@ -75,6 +81,9 @@ class customize : AppCompatActivity() {
             editor.apply {
                 putBoolean("drink_reminder", userinfo.drink)
             }.apply()
+
+            Toast.makeText(this,"Change applied when reminders are reactivated ",Toast.LENGTH_SHORT).show()
+
         }
 
         posture_cb.setOnCheckedChangeListener { buttonView, isChecked ->
@@ -84,6 +93,7 @@ class customize : AppCompatActivity() {
             editor.apply {
                 putBoolean("posture_reminder", userinfo.posture)
             }.apply()
+            val toast=Toast.makeText(this,"Change applied when reminders are reactivated ",Toast.LENGTH_SHORT).show()
         }
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.botom_navigation)
