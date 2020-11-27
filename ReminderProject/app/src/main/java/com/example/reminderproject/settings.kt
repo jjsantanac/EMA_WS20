@@ -1,5 +1,6 @@
 package com.example.reminderproject
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,7 +15,7 @@ import java.io.Serializable
 public class settings : AppCompatActivity() {
 
 
-    data class User(var name:String):Serializable{
+    data class User(var name:String?):Serializable{
         var age:Int=0
         var weight:Int=0
         var height:Int=0
@@ -23,7 +24,19 @@ public class settings : AppCompatActivity() {
         var drink:Boolean=true
     }
 
-    lateinit var user_info:User
+    var userinfo=User(name=null)
+
+    private fun loadData(){
+        val sharedPreferences=getSharedPreferences("user_settings", Context.MODE_PRIVATE)
+        val user_name=sharedPreferences.getString("user_name",null)
+        val user_age=sharedPreferences.getInt("user_age",0)
+        val user_height=sharedPreferences.getInt("user_height",0)
+        val user_weight=sharedPreferences.getInt("user_weight",0)
+        userinfo.name=user_name
+        userinfo.age=user_age
+        userinfo.height=user_height
+        userinfo.weight=user_weight
+    }
 
 
     private val switchActivity = BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -54,7 +67,7 @@ public class settings : AppCompatActivity() {
 
     fun loadFragment(){
         val intent = Intent(this@settings, edit_profile_activity::class.java)
-        intent.putExtra("user",user_info)
+        intent.putExtra("user",userinfo)
         startActivity(intent)
 
     }
@@ -65,7 +78,8 @@ public class settings : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        user_info=intent.getSerializableExtra("user") as User
+       // user_info=intent.getSerializableExtra("user") as User
+        loadData()
 
         val namefield=findViewById<TextView>(R.id.namefield)
         val agefield=findViewById<TextView>(R.id.agefield)
@@ -73,10 +87,10 @@ public class settings : AppCompatActivity() {
         val weightfield=findViewById<TextView>(R.id.weightfield)
 
 
-        namefield.text=user_info.name
-        agefield.text=user_info.age.toString()
-        heightfield.text=user_info.height.toString()
-        weightfield.text=user_info.weight.toString()
+        namefield.text=userinfo.name
+        agefield.text=userinfo.age.toString()
+        heightfield.text=userinfo.height.toString()
+        weightfield.text=userinfo.weight.toString()
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.botom_navigation)
         bottomNavigation.selectedItemId=R.id.profile

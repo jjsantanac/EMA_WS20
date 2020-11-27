@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.content.Intent
+import android.content.ServiceConnection
 import android.os.Build
 import android.os.CountDownTimer
 import android.widget.Button
@@ -49,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    public lateinit var userinfo: settings.User
+     public var userinfo= settings.User(name=null)
 
     private val switchActivity = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.profile -> {
                 val intent = Intent(this@MainActivity, settings::class.java)
-                intent.putExtra("user", userinfo)
+               // intent.putExtra("user", userinfo)
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
             }
@@ -79,6 +80,23 @@ class MainActivity : AppCompatActivity() {
         false
 
     }
+    private fun loadData(){
+        val sharedPreferences=getSharedPreferences("user_settings",Context.MODE_PRIVATE)
+        val user_name=sharedPreferences.getString("user_name",null)
+        val user_age=sharedPreferences.getInt("user_age",0)
+        val user_height=sharedPreferences.getInt("user_height",0)
+        val user_weight=sharedPreferences.getInt("user_weight",0)
+        val movement_status=sharedPreferences.getBoolean("movement_reminder",true)
+        val posture_status=sharedPreferences.getBoolean("posture_reminder",true)
+        val drink_status=sharedPreferences.getBoolean("drink_reminder",true)
+        userinfo.name=user_name
+        userinfo.age=user_age
+        userinfo.height=user_height
+        userinfo.weight=user_weight
+        userinfo.move=movement_status
+        userinfo.posture=posture_status
+        userinfo.drink=drink_status
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,11 +104,12 @@ class MainActivity : AppCompatActivity() {
         //if(intent.getSerializableExtra("user") as settings.User!=null){
         //    userinfo = settings.User(name = "Julian")
         //}
-        userinfo = try {
-            intent.getSerializableExtra("user") as settings.User
-        }catch (e:Exception){
-            settings.User(name = "Julian")
-        }
+        //userinfo = try {
+        //    intent.getSerializableExtra("user") as settings.User
+        //}catch (e:Exception){
+         //   settings.User(name = "Julian")
+        //}
+        loadData()
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.botom_navigation)
         bottomNavigation.selectedItemId = R.id.homescreen
