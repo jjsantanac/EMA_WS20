@@ -83,10 +83,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        if(userinfo==null){
-            userinfo = settings.User(name = "Julian")
+        //if(intent.getSerializableExtra("user") as settings.User!=null){
+        //    userinfo = settings.User(name = "Julian")
+        //}
+        userinfo = try {
+            intent.getSerializableExtra("user") as settings.User
+        }catch (e:Exception){
+            settings.User(name = "Julian")
         }
-        userinfo=intent.getSerializableExtra("user") as settings.User
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.botom_navigation)
         bottomNavigation.selectedItemId = R.id.homescreen
