@@ -1,16 +1,14 @@
 package com.example.reminderproject
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.fragment.app.Fragment
 
 class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
 
@@ -41,9 +39,10 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
 
     }
 
-    private var historyList=generateDummyList(5)
 
-    private val adapter=HistoryViewAdapter(historyList,this)
+
+
+
 
     fun browseuebungen(){
         val transaction = supportFragmentManager.beginTransaction()
@@ -52,6 +51,20 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
         transaction.commit()
     }
 
+    fun LoadNotificationCounter(): Int{
+        val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
+
+        return sharedPreferences.getInt("notification_count",0)
+    }
+
+    //private var notification_counter=LoadNotificationCounter()
+
+    //private var historyList=generateDummyList(notification_counter)
+    //private val adapter=HistoryViewAdapter(historyList,this)
+
+    lateinit var historyList:ArrayList<historyItem>
+    lateinit var adapter:HistoryViewAdapter
+
     fun OpenBrowseUebungenActivity(){
         val intent = Intent(this@uebungen, browse_uebungen_a::class.java)
         startActivity(intent)
@@ -59,14 +72,28 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
 
     override fun onImageClick(position: Int) {
 
-        Toast.makeText(this,"Item $position clicked",Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this,"Item $position clicked",Toast.LENGTH_SHORT).show()
         historyList.removeAt(position)
         adapter.notifyDataSetChanged()
+
+        val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
+        var notification_counter=sharedPreferences.getInt("notification_count",0)
+        val editor = sharedPreferences.edit()
+        editor.apply{
+            putInt("notification_count",notification_counter-1)
+        }.apply()
+    }
+
+    fun CreateHistoryList(notification_counter:Int){
+        historyList=generateDummyList(notification_counter)
+        adapter=HistoryViewAdapter(historyList,this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_uebungen)
+
+        CreateHistoryList(LoadNotificationCounter())
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.botom_navigation)
         bottomNavigation.selectedItemId=R.id.uebungen
@@ -96,7 +123,8 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
         val list = ArrayList<historyItem>()
         for (i in 0 until size) {
 
-            val item = historyItem( "Item $i", "Content 2")
+            val workout_number=(1..3).random()
+            val item = historyItem( "Time to stretch!", "Complete workout $workout_number.")
             list += item
         }
         return list

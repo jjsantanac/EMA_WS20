@@ -38,8 +38,8 @@ class HistoryViewAdapter(private val historyList: List<historyItem>,private val 
 
 
     inner class HistoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener{
-        val textview1: TextView = itemView.findViewById(R.id.title1)
-        val textview2: TextView = itemView.findViewById(R.id.content1)
+        val textview1: TextView = itemView.findViewById(R.id.content1)
+        val textview2: TextView = itemView.findViewById(R.id.title1)
 
         val removebutton: ImageView =itemView.findViewById(R.id.removeHistoryitem)
 

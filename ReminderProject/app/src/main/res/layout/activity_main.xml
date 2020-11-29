@@ -49,7 +49,7 @@
         android:layout_marginTop="101dp"
         android:background="@drawable/custom_button"
         android:backgroundTint="@null"
-        android:text="OFF"
+        android:text="@null"
         android:textColor="#FFF"
         android:textSize="40dp"
         android:paddingBottom="30dp"/>

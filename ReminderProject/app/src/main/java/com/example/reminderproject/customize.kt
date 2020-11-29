@@ -5,10 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
-import android.widget.CheckBox
-import android.widget.CompoundButton
-import android.widget.RadioGroup
-import android.widget.Toast
+import android.widget.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -25,6 +22,12 @@ class customize : AppCompatActivity() {
         movement.isChecked=movement_status
         posture.isChecked=posture_status
         drink.isChecked=drink_status
+    }
+
+    private fun loadNotes(rowID: String, editText: EditText){
+        val sharedPreferences=getSharedPreferences("user_settings", Context.MODE_PRIVATE)
+        val text=sharedPreferences.getString(rowID,"")
+        editText.setText(text)
     }
 
 
@@ -100,5 +103,63 @@ class customize : AppCompatActivity() {
         bottomNavigation.selectedItemId=R.id.customize
 
         bottomNavigation.setOnNavigationItemSelectedListener(switchActivity)
+
+        val editTextRow1=findViewById<EditText>(R.id.edit_notes)
+        val editTextRow2=findViewById<EditText>(R.id.edit_notes2)
+        val editTextRow3=findViewById<EditText>(R.id.edit_notes3)
+        val editTextRow4=findViewById<EditText>(R.id.edit_notes4)
+        val editTextRow5=findViewById<EditText>(R.id.edit_notes5)
+
+        loadNotes("1",editTextRow1)
+        loadNotes("2",editTextRow2)
+        loadNotes("3",editTextRow3)
+        loadNotes("4",editTextRow4)
+        loadNotes("5",editTextRow5)
+
+
+
+        editTextRow1.setOnKeyListener { v, keyCode, event ->
+
+            SaveNotesOnKeyPress("1",editTextRow1.text.toString())
+
+            return@setOnKeyListener true
+        }
+
+        editTextRow2.setOnKeyListener { v, keyCode, event ->
+
+            SaveNotesOnKeyPress("2",editTextRow2.text.toString())
+
+            return@setOnKeyListener true
+        }
+
+        editTextRow3.setOnKeyListener { v, keyCode, event ->
+
+            SaveNotesOnKeyPress("3",editTextRow3.text.toString())
+
+            return@setOnKeyListener true
+        }
+
+        editTextRow4.setOnKeyListener { v, keyCode, event ->
+
+            SaveNotesOnKeyPress("4",editTextRow4.text.toString())
+
+            return@setOnKeyListener true
+        }
+
+        editTextRow5.setOnKeyListener { v, keyCode, event ->
+
+            SaveNotesOnKeyPress("5",editTextRow5.text.toString())
+
+            return@setOnKeyListener true
+        }
+
+    }
+
+    fun SaveNotesOnKeyPress(rowID:String, content: String){
+        val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.apply {
+            putString(rowID, content)
+        }.apply()
     }
 }

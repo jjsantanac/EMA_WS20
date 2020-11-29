@@ -17,17 +17,30 @@ import androidx.core.app.NotificationManagerCompat
 class MainActivity : AppCompatActivity() {
 
 
+    companion object{
+        lateinit var timer_move:CountDownTimer
+        lateinit var timer_posture:CountDownTimer
+        lateinit var timer_drink:CountDownTimer
+    }
 
-    val timer_move = object : CountDownTimer(10000, 1000) {
+
+    /*val timer_move = object : CountDownTimer(10000, 1000) {
         override fun onTick(millisUntilFinished: Long) {}
 
         override fun onFinish() {
             sendNotification("101")
+
+            val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
+            var notification_counter=sharedPreferences.getInt("notification_count",0)
+            val editor = sharedPreferences.edit()
+            editor.apply{
+                putInt("notification_count",notification_counter+1)
+            }.apply()
             this.start()
         }
 
 
-    }
+    }*/
     val timer_posture = object : CountDownTimer(10000, 1000) {
         override fun onTick(millisUntilFinished: Long) {}
 
@@ -101,14 +114,29 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //if(intent.getSerializableExtra("user") as settings.User!=null){
-        //    userinfo = settings.User(name = "Julian")
-        //}
-        //userinfo = try {
-        //    intent.getSerializableExtra("user") as settings.User
-        //}catch (e:Exception){
-         //   settings.User(name = "Julian")
-        //}
+
+        timer_move = object : CountDownTimer(10000, 1000) {
+            override fun onTick(millisUntilFinished: Long) {}
+
+            override fun onFinish() {
+                sendNotification("101")
+
+                val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
+                var notification_counter=sharedPreferences.getInt("notification_count",0)
+                val editor = sharedPreferences.edit()
+                editor.apply{
+                    putInt("notification_count",notification_counter+1)
+                }.apply()
+                this.start()
+            }
+
+
+        }
+
+        val sharedPreferences=getSharedPreferences("user_settings",Context.MODE_PRIVATE)
+        val button_state=sharedPreferences.getBoolean("button_state",false)
+
+
         loadData()
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.botom_navigation)
@@ -121,6 +149,14 @@ class MainActivity : AppCompatActivity() {
         createNotificationChannel("trinken","103")
 
         val button_notify = findViewById<Button>(R.id.button_notification)
+
+        if(button_state){
+            button_notify.text="ON"
+        }
+        else{
+            button_notify.text="OFF"
+        }
+
         button_notify.setOnClickListener {
             val button_status = button_notify.text.toString()
             if(button_status=="ON"){
@@ -128,9 +164,11 @@ class MainActivity : AppCompatActivity() {
                 timer_move.cancel()
                 timer_drink.cancel()
                 timer_posture.cancel()
+                SaveButtonState(false)
             }
             else{
                 button_notify.text="ON"
+                SaveButtonState(true)
                 if(userinfo.move){
                     timer_move.start()
                 }
@@ -194,5 +232,13 @@ class MainActivity : AppCompatActivity() {
         with(NotificationManagerCompat.from(this)) {
             notify(notificationId, builder.build())
         }
+    }
+
+    private fun SaveButtonState(state:Boolean){
+        val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.apply{
+            putBoolean("button_state",state)
+        }.apply()
     }
 }
