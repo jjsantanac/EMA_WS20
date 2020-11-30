@@ -17,11 +17,6 @@ import androidx.core.app.NotificationManagerCompat
 class MainActivity : AppCompatActivity() {
 
 
-    companion object{
-        lateinit var timer_move:CountDownTimer
-        lateinit var timer_posture:CountDownTimer
-        lateinit var timer_drink:CountDownTimer
-    }
 
 
     /*val timer_move = object : CountDownTimer(10000, 1000) {
@@ -41,27 +36,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }*/
-    val timer_posture = object : CountDownTimer(10000, 1000) {
-        override fun onTick(millisUntilFinished: Long) {}
 
-        override fun onFinish() {
-            sendNotification("102")
-
-            this.start()
-        }
-
-
-    }
-    val timer_drink = object : CountDownTimer(10000, 1000) {
-        override fun onTick(millisUntilFinished: Long) {}
-
-        override fun onFinish() {
-            sendNotification("103")
-            this.start()
-        }
-
-
-    }
 
      public var userinfo= settings.User(name=null)
 
@@ -115,23 +90,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        timer_move = object : CountDownTimer(10000, 1000) {
-            override fun onTick(millisUntilFinished: Long) {}
-
-            override fun onFinish() {
-                sendNotification("101")
-
-                val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
-                var notification_counter=sharedPreferences.getInt("notification_count",0)
-                val editor = sharedPreferences.edit()
-                editor.apply{
-                    putInt("notification_count",notification_counter+1)
-                }.apply()
-                this.start()
-            }
-
-
-        }
 
         val sharedPreferences=getSharedPreferences("user_settings",Context.MODE_PRIVATE)
         val button_state=sharedPreferences.getBoolean("button_state",false)
@@ -161,22 +119,22 @@ class MainActivity : AppCompatActivity() {
             val button_status = button_notify.text.toString()
             if(button_status=="ON"){
                 button_notify.text="OFF"
-                timer_move.cancel()
-                timer_drink.cancel()
-                timer_posture.cancel()
+                SplashActivity.Companion.timer_move.cancel()
+                SplashActivity.Companion.timer_drink.cancel()
+                SplashActivity.Companion.timer_posture.cancel()
                 SaveButtonState(false)
             }
             else{
                 button_notify.text="ON"
                 SaveButtonState(true)
                 if(userinfo.move){
-                    timer_move.start()
+                    SplashActivity.Companion.timer_move.start()
                 }
                 if(userinfo.drink){
-                    timer_drink.start()
+                    SplashActivity.Companion.timer_drink.start()
                 }
                 if(userinfo.posture){
-                    timer_posture.start()
+                    SplashActivity.Companion.timer_posture.start()
                 }
             }
         }
@@ -202,7 +160,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun sendNotification(channelid:String) {
+    fun sendNotification(channelid:String) {
         var title="hallo"
         var content="hallo"
 
