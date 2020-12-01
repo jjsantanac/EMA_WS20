@@ -11,6 +11,7 @@ import android.content.ServiceConnection
 import android.os.Build
 import android.os.CountDownTimer
 import android.widget.Button
+import android.widget.TextView
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 
@@ -19,23 +20,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    /*val timer_move = object : CountDownTimer(10000, 1000) {
-        override fun onTick(millisUntilFinished: Long) {}
-
-        override fun onFinish() {
-            sendNotification("101")
-
-            val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
-            var notification_counter=sharedPreferences.getInt("notification_count",0)
-            val editor = sharedPreferences.edit()
-            editor.apply{
-                putInt("notification_count",notification_counter+1)
-            }.apply()
-            this.start()
-        }
-
-
-    }*/
 
 
      public var userinfo= settings.User(name=null)
@@ -90,12 +74,37 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var quotes = mutableListOf(getString(R.string.zitat1),
+            getString(R.string.zitat2),
+            getString(R.string.zitat3),
+            getString(R.string.zitat4),
+            getString(R.string.zitat5),
+            getString(R.string.zitat6),
+            getString(R.string.zitat7),
+            getString(R.string.zitat8),
+            getString(R.string.zitat9),
+            getString(R.string.zitat10),
+            getString(R.string.zitat11),
+            getString(R.string.zitat12),
+            getString(R.string.zitat13),
+            getString(R.string.zitat14),
+            getString(R.string.zitat15)
+        )
+        val quotes_index=(0..14).random()
+
+
+
+
 
         val sharedPreferences=getSharedPreferences("user_settings",Context.MODE_PRIVATE)
         val button_state=sharedPreferences.getBoolean("button_state",false)
 
 
         loadData()
+
+        val text= findViewById<TextView>(R.id.qoutes)
+        text.text=quotes[quotes_index]
+
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.botom_navigation)
         bottomNavigation.selectedItemId = R.id.homescreen
