@@ -10,6 +10,8 @@ import android.content.Intent
 import android.content.ServiceConnection
 import android.os.Build
 import android.os.CountDownTimer
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.app.NotificationCompat
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-     public var userinfo= settings.User(name=null)
+    public var userinfo= settings.User(name=null)
 
     private val switchActivity = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -91,6 +93,8 @@ class MainActivity : AppCompatActivity() {
             getString(R.string.zitat15)
         )
         val quotes_index=(0..14).random()
+        val scaleUp=AnimationUtils.loadAnimation(this,R.anim.scale_up)
+        val scaleDown=AnimationUtils.loadAnimation(this,R.anim.scale_down)
 
 
 
@@ -103,7 +107,7 @@ class MainActivity : AppCompatActivity() {
         loadData()
 
         val text= findViewById<TextView>(R.id.qoutes)
-        text.text=quotes[quotes_index]
+        text.text="\""+quotes[quotes_index]+"\""
 
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.botom_navigation)
@@ -146,7 +150,11 @@ class MainActivity : AppCompatActivity() {
                     SplashActivity.Companion.timer_posture.start()
                 }
             }
+            button_notify.startAnimation(scaleDown)
+            button_notify.startAnimation(scaleUp)
         }
+
+
     }
 
     lateinit var channel_id:String

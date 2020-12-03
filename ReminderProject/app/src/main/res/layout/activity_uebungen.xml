@@ -64,7 +64,11 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="28dp"
         android:layout_marginTop="129dp"
-        android:text="Gallerie" />
+        android:text="Gallerie"
+        android:fontFamily="@font/custom_font"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"/>
 
 
 

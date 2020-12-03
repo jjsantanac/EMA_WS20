@@ -50,11 +50,13 @@
         android:layout_marginStart="43dp"
         android:layout_marginTop="71dp"
         android:background="@drawable/custom_button"
-        android:backgroundTint="@null"
-        android:paddingBottom="30dp"
-        android:text="@null"
+        android:text="lol"
         android:textColor="#FFF"
-        android:textSize="40dp" />
+        android:textSize="60dp"
+        android:fontFamily="@font/custom_font"
+        android:textStyle="italic|bold"
+        android:textAlignment="center"
+        />
 
 
 </RelativeLayout>

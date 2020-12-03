@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#404040"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/botom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/botom_navigation"
+        android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
         app:itemBackground="@android:color/white"
-        app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
-        app:menu="@menu/menu_navigation"
-        android:layout_alignParentBottom="true"
-        />
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation" />
 
     <CheckBox
         android:id="@+id/movement_cb"
@@ -30,14 +27,13 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="60dp"
+        android:checked="true"
         android:fontFamily="@font/custom_font"
         android:text="Bewegung"
         android:textColor="@color/white"
-        android:textSize="40dp"
-        android:checked="true"
-        />
+        android:textSize="40dp" />
 
     <CheckBox
         android:id="@+id/drink_cb"
@@ -47,15 +43,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="190dp"
-        android:layout_marginEnd="94dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="101dp"
+        android:checked="true"
         android:fontFamily="@font/custom_font"
         android:text="Trinken"
         android:textColor="@color/white"
-        android:textSize="40dp"
-        android:checked="true"
-        />
+        android:textSize="40dp" />
 
     <CheckBox
         android:id="@+id/posture_cb"
@@ -65,15 +60,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="111dp"
-        android:layout_marginTop="260dp"
-        android:layout_marginEnd="94dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="100dp"
+        android:checked="true"
         android:fontFamily="@font/custom_font"
         android:text="Haltung"
         android:textColor="@color/white"
-        android:textSize="40dp"
-        android:checked="true"
-        />
+        android:textSize="40dp" />
 
     <EditText
         android:id="@+id/edit_notes"
@@ -84,9 +78,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="67dp"
         android:layout_marginBottom="210dp"
+        android:backgroundTint="#66FF99"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/edit_notes2"
@@ -97,10 +92,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="66dp"
         android:layout_marginBottom="165dp"
+        android:backgroundTint="#66FF99"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
-        />
+        android:textColor="@color/white" />
+
 
     <EditText
         android:id="@+id/edit_notes3"
@@ -111,10 +107,10 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="67dp"
         android:layout_marginBottom="255dp"
+        android:backgroundTint="#66FF99"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
-        />
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/edit_notes4"
@@ -125,9 +121,10 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="68dp"
         android:layout_marginBottom="75dp"
+        android:backgroundTint="#66FF99"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white" />
 
     <EditText
         android:id="@+id/edit_notes5"
@@ -138,10 +135,11 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="67dp"
         android:layout_marginBottom="120dp"
+        android:backgroundTint="#66FF99"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="@color/white"
-        />
+        android:textColor="@color/white" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -153,7 +151,18 @@
         android:text="My Goals"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="25dp" />
+        android:textSize="45dp"
+        android:fontFamily="@font/custom_font"/>
+
+    <View
+        android:layout_width="340dp"
+        android:layout_height="3dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="283dp"
+        android:background="#66FF99" />
 
 
 </RelativeLayout>
