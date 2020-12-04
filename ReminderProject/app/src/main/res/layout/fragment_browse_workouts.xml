@@ -16,12 +16,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="18dp"
         android:layout_marginTop="76dp"
-        android:background="@color/white"
+        android:background="#66FF99"
         android:text="Workout 1"
         android:textAlignment="center"
         android:paddingTop="25dp"
         android:fontFamily="@font/custom_font"
-        android:textSize="25dp"/>
+        android:textSize="35dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/workout2_textview"
@@ -32,12 +33,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="23dp"
         android:layout_marginTop="204dp"
-        android:background="@color/white"
+        android:background="#66FF99"
         android:paddingTop="25dp"
         android:text="Workout 2"
         android:textAlignment="center"
         android:fontFamily="@font/custom_font"
-        android:textSize="25dp"/>
+        android:textSize="35dp"
+        android:textColor="@color/white"/>
 
     <ImageView
         android:id="@+id/imageView6"
@@ -68,12 +70,13 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="25dp"
         android:layout_marginTop="321dp"
-        android:background="@color/white"
+        android:background="#66FF99"
         android:fontFamily="@font/custom_font"
         android:paddingTop="25dp"
         android:text="Workout 3"
         android:textAlignment="center"
-        android:textSize="25dp" />
+        android:textSize="35dp"
+        android:textColor="@color/white"/>
 
     <ImageView
         android:id="@+id/imageView7"
