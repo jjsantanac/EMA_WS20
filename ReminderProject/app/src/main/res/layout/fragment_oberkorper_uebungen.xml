@@ -9,99 +9,117 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/oberkoerper1_textview"
-        android:layout_width="361dp"
-        android:layout_height="73dp"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="76dp"
-        android:background="@color/white"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="19dp"
+        android:background="#66FF99"
+        android:fontFamily="@font/custom_font"
+        android:paddingTop="15dp"
         android:text="Chest stretch"
         android:textAlignment="center"
-        android:paddingTop="25dp"
-        android:fontFamily="@font/custom_font"
-        android:textSize="25dp"/>
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold|italic"/>
 
     <TextView
         android:id="@+id/oberkoerper2_textview"
-        android:layout_width="361dp"
-        android:layout_height="73dp"
+        android:layout_width="392dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="364dp"
-        android:background="@color/white"
-        android:paddingTop="25dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginEnd="19dp"
+        android:background="#66FF99"
+        android:fontFamily="@font/custom_font"
+        android:paddingTop="15dp"
         android:text="Shouldershrug"
         android:textAlignment="center"
-        android:fontFamily="@font/custom_font"
-        android:textSize="25dp"/>
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold|italic"/>
 
     <TextView
         android:id="@+id/oberkoerper3_textview"
-        android:layout_width="361dp"
-        android:layout_height="73dp"
+        android:layout_width="383dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="261dp"
-        android:background="@color/white"
-        android:paddingTop="25dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="19dp"
+        android:background="#66FF99"
+        android:fontFamily="@font/custom_font"
+        android:paddingTop="15dp"
         android:text="Upper back stretch"
         android:textAlignment="center"
-        android:fontFamily="@font/custom_font"
-        android:textSize="25dp"/>
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold|italic"/>
 
     <TextView
         android:id="@+id/oberkoerper4_textview"
-        android:layout_width="361dp"
-        android:layout_height="73dp"
+        android:layout_width="387dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="168dp"
-        android:background="@color/white"
-        android:paddingTop="25dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="19dp"
+        android:background="#66FF99"
+        android:fontFamily="@font/custom_font"
+        android:paddingTop="15dp"
         android:text="Torso twist"
         android:textAlignment="center"
-        android:fontFamily="@font/custom_font"
-        android:textSize="25dp"/>
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold|italic"/>
 
     <TextView
         android:id="@+id/oberkoerper5_textview"
-        android:layout_width="361dp"
-        android:layout_height="73dp"
+        android:layout_width="392dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="459dp"
-        android:background="@color/white"
-        android:paddingTop="25dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginEnd="19dp"
+        android:background="#66FF99"
+        android:fontFamily="@font/custom_font"
+        android:paddingTop="15dp"
         android:text="Neck stretch"
         android:textAlignment="center"
-        android:fontFamily="@font/custom_font"
-        android:textSize="25dp"/>
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold|italic"/>
 
     <TextView
         android:id="@+id/oberkoerper6_textview"
-        android:layout_width="361dp"
-        android:layout_height="73dp"
+        android:layout_width="383dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="560dp"
-        android:background="@color/white"
-        android:paddingTop="25dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginEnd="19dp"
+        android:background="#66FF99"
+        android:fontFamily="@font/custom_font"
+        android:paddingTop="15dp"
         android:text="Wall slides"
         android:textAlignment="center"
-        android:fontFamily="@font/custom_font"
-        android:textSize="25dp"/>
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold|italic"/>
 
     <ImageView
         android:id="@+id/oberkoerper6_imageview"
@@ -109,8 +127,8 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="273dp"
-        android:layout_marginEnd="38dp"
+        android:layout_marginTop="265dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
@@ -119,8 +137,8 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="371dp"
-        android:layout_marginEnd="38dp"
+        android:layout_marginTop="355dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
@@ -129,8 +147,8 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="467dp"
-        android:layout_marginEnd="38dp"
+        android:layout_marginTop="445dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
@@ -139,8 +157,8 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="567dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginTop="535dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
@@ -149,8 +167,8 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="182dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
@@ -160,7 +178,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="85dp"
-        android:layout_marginEnd="42dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
 </RelativeLayout>

@@ -33,7 +33,8 @@
         android:fontFamily="@font/custom_font"
         android:text="Bewegung"
         android:textColor="@color/white"
-        android:textSize="40dp" />
+        android:textSize="40dp"
+        android:textStyle="bold"/>
 
     <CheckBox
         android:id="@+id/drink_cb"
@@ -50,7 +51,8 @@
         android:fontFamily="@font/custom_font"
         android:text="Trinken"
         android:textColor="@color/white"
-        android:textSize="40dp" />
+        android:textSize="40dp"
+        android:textStyle="bold"/>
 
     <CheckBox
         android:id="@+id/posture_cb"
@@ -67,7 +69,8 @@
         android:fontFamily="@font/custom_font"
         android:text="Haltung"
         android:textColor="@color/white"
-        android:textSize="40dp" />
+        android:textSize="40dp"
+        android:textStyle="bold"/>
 
     <EditText
         android:id="@+id/edit_notes"
@@ -152,7 +155,8 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="45dp"
-        android:fontFamily="@font/custom_font"/>
+        android:fontFamily="@font/custom_font"
+        android:textStyle="bold"/>
 
     <View
         android:layout_width="340dp"

@@ -9,51 +9,60 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/oberkoerper_textview"
-        android:layout_width="361dp"
-        android:layout_height="73dp"
+        android:layout_width="392dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="76dp"
-        android:background="@color/white"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="19dp"
+        android:background="#66FF99"
+        android:fontFamily="@font/custom_font"
+        android:paddingTop="15dp"
         android:text="Oberkörper"
         android:textAlignment="center"
-        android:paddingTop="25dp"
-        android:fontFamily="@font/custom_font"
-        android:textSize="25dp"/>
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold|italic"/>
 
     <TextView
         android:id="@+id/beine_textview"
-        android:layout_width="361dp"
-        android:layout_height="73dp"
+        android:layout_width="380dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="305dp"
-        android:background="@color/white"
-        android:paddingTop="25dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="19dp"
+        android:background="#66FF99"
+        android:fontFamily="@font/custom_font"
+        android:paddingTop="15dp"
         android:text="Beine"
         android:textAlignment="center"
-        android:fontFamily="@font/custom_font"
-        android:textSize="25dp"/>
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold|italic"/>
 
     <TextView
         android:id="@+id/handgelenk_textview"
-        android:layout_width="361dp"
-        android:layout_height="73dp"
+        android:layout_width="392dp"
+        android:layout_height="70dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="185dp"
-        android:background="@color/white"
-        android:paddingTop="25dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="19dp"
+        android:background="#66FF99"
+        android:fontFamily="@font/custom_font"
+        android:paddingTop="15dp"
         android:text="Handgelenk"
         android:textAlignment="center"
-        android:fontFamily="@font/custom_font"
-        android:textSize="25dp"/>
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold|italic"/>
 
     <ImageView
         android:id="@+id/imageView3"
@@ -61,8 +70,8 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="83dp"
-        android:layout_marginEnd="40dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
@@ -71,8 +80,8 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="192dp"
-        android:layout_marginEnd="37dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
@@ -81,8 +90,8 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="309dp"
-        android:layout_marginEnd="39dp"
+        android:layout_marginTop="265dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
 </RelativeLayout>
