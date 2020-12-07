@@ -26,7 +26,8 @@
             android:text="Line 1"
             android:fontFamily="@font/custom_font"
             android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="#404040"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,7 +35,8 @@
             android:layout_below="@id/title1"
             android:text="Line 2"
             android:id="@+id/content1"
-            android:fontFamily="@font/custom_font"/>
+            android:fontFamily="@font/custom_font"
+            android:textColor="#404040"/>
 
 
 

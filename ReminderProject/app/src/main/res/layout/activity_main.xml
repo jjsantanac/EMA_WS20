@@ -11,19 +11,21 @@
 
     <TextView
         android:id="@+id/qoutes"
-        android:layout_width="309dp"
-        android:layout_height="214dp"
+        android:layout_width="359dp"
+        android:layout_height="206dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="62dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="106dp"
         android:fontFamily="@font/custom_font"
         android:padding="15dp"
         android:text="Du bist der coolste !!"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -42,21 +44,21 @@
 
     <Button
         android:id="@+id/button_notification"
-        android:layout_width="309dp"
-        android:layout_height="296dp"
+        android:layout_width="366dp"
+        android:layout_height="310dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="43dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="71dp"
+        android:layout_marginEnd="45dp"
         android:background="@drawable/custom_button"
+        android:fontFamily="@font/custom_font"
         android:text="lol"
+        android:textAlignment="center"
         android:textColor="#FFF"
         android:textSize="60dp"
-        android:fontFamily="@font/custom_font"
-        android:textStyle="italic|bold"
-        android:textAlignment="center"
-        />
+        android:textStyle="italic|bold" />
 
 
 </RelativeLayout>
