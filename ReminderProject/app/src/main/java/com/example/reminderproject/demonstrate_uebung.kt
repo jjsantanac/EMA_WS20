@@ -4,6 +4,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.widget.FrameLayout
 import android.widget.MediaController
 import android.widget.TextView
 import android.widget.VideoView
@@ -19,6 +20,10 @@ class demonstrate_uebung : AppCompatActivity() {
 
         val video=findViewById<VideoView>(R.id.videoView2)
         val description=findViewById<TextView>(R.id.description_textView)
+        val videocontainer=findViewById<FrameLayout>(R.id.videoview_container)
+
+        videocontainer.clipToOutline = true
+        video.clipToOutline = true
 
         val mediacontroller=MediaController(this)
         val source:Uri
@@ -112,7 +117,7 @@ class demonstrate_uebung : AppCompatActivity() {
         }
 
 
-        video.setMediaController(mediacontroller)
+        //video.setMediaController(mediacontroller)
         video.setVideoURI(source)
         video.setOnCompletionListener {
             video.start()
