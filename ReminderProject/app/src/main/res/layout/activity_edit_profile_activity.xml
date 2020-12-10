@@ -9,7 +9,6 @@
 
 
 
-    <!-- TODO: Update blank fragment layout -->
 
     <EditText
         android:id="@+id/name"
@@ -17,9 +16,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
+        android:fontFamily="@font/custom_font"
+        android:backgroundTint="#66FF99"
+        android:textColor="@color/white"
         android:inputType="textPersonName"
         android:text="Name"
         />
@@ -31,7 +33,10 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="122dp"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#66FF99"
+        android:fontFamily="@font/custom_font"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Alter" />
@@ -41,22 +46,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:fontFamily="@font/custom_font"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="195dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="180dp"
         android:ems="10"
+        android:textColor="@color/white"
         android:inputType="textPersonName"
+        android:backgroundTint="#66FF99"
         android:text="Größe" />
 
     <EditText
         android:id="@+id/weight"
         android:layout_width="wrap_content"
+        android:fontFamily="@font/custom_font"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="275dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="240dp"
         android:ems="10"
+        android:textColor="@color/white"
+        android:backgroundTint="#66FF99"
         android:inputType="textPersonName"
         android:text="Gewicht" />
 
@@ -64,10 +75,10 @@
         android:id="@+id/savedata"
         android:layout_width="128dp"
         android:layout_height="74dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="129dp"
+        android:textAlignment="center"
         android:layout_marginBottom="285dp"
+        android:layout_marginTop="330dp"
         android:text="Speichern"
         />
 

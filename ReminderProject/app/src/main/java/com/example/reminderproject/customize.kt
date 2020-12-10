@@ -37,12 +37,14 @@ class customize : AppCompatActivity() {
                 val intent = Intent(this@customize, MainActivity::class.java)
                 intent.putExtra("user", userinfo)
                 startActivity(intent)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.profile -> {
                 val intent = Intent(this@customize, settings::class.java)
                 intent.putExtra("user", userinfo)
                 startActivity(intent)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.customize -> {
@@ -52,6 +54,7 @@ class customize : AppCompatActivity() {
             R.id.uebungen -> {
                 val intent = Intent(this@customize, uebungen::class.java)
                 startActivity(intent)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
         }

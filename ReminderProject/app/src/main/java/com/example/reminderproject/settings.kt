@@ -44,6 +44,7 @@ public class settings : AppCompatActivity() {
             R.id.homescreen -> {
                 val intent = Intent(this@settings, MainActivity::class.java)
                 startActivity(intent)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.profile -> {
@@ -53,11 +54,13 @@ public class settings : AppCompatActivity() {
             R.id.customize -> {
                 val intent = Intent(this@settings, customize::class.java)
                 startActivity(intent)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.uebungen -> {
                 val intent = Intent(this@settings, uebungen::class.java)
                 startActivity(intent)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
         }

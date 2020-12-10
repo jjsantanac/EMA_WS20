@@ -18,16 +18,19 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
             R.id.homescreen -> {
                 val intent = Intent(this@uebungen, MainActivity::class.java)
                 startActivity(intent)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.profile -> {
                 val intent = Intent(this@uebungen, settings::class.java)
                 startActivity(intent)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.customize -> {
                 val intent = Intent(this@uebungen, customize::class.java)
                 startActivity(intent)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.uebungen -> {
@@ -38,12 +41,7 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
         false
 
     }
-
-
-
-
-
-
+    
     fun browseuebungen(){
         val transaction = supportFragmentManager.beginTransaction()
         val fragment=browse_uebuengen()

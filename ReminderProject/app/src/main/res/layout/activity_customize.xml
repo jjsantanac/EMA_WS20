@@ -79,6 +79,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:fontFamily="@font/custom_font"
         android:layout_marginStart="67dp"
         android:layout_marginBottom="210dp"
         android:backgroundTint="#66FF99"
@@ -96,6 +97,7 @@
         android:layout_marginStart="66dp"
         android:layout_marginBottom="165dp"
         android:backgroundTint="#66FF99"
+        android:fontFamily="@font/custom_font"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/white" />
@@ -112,6 +114,7 @@
         android:layout_marginBottom="255dp"
         android:backgroundTint="#66FF99"
         android:ems="10"
+        android:fontFamily="@font/custom_font"
         android:inputType="textPersonName"
         android:textColor="@color/white" />
 
@@ -124,6 +127,7 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="68dp"
         android:layout_marginBottom="75dp"
+        android:fontFamily="@font/custom_font"
         android:backgroundTint="#66FF99"
         android:ems="10"
         android:inputType="textPersonName"
@@ -139,6 +143,7 @@
         android:layout_marginStart="67dp"
         android:layout_marginBottom="120dp"
         android:backgroundTint="#66FF99"
+        android:fontFamily="@font/custom_font"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@color/white" />
@@ -161,11 +166,10 @@
     <View
         android:layout_width="340dp"
         android:layout_height="3dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="283dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="300dp"
         android:background="#66FF99" />
 
 

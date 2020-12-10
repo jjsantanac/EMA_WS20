@@ -19,11 +19,6 @@ import androidx.core.app.NotificationManagerCompat
 
 class MainActivity : AppCompatActivity() {
 
-
-
-
-
-
     public var userinfo= settings.User(name=null)
 
     private val switchActivity = BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -35,19 +30,21 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, settings::class.java)
                // intent.putExtra("user", userinfo)
                 startActivity(intent)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.customize -> {
                 val intent = Intent(this@MainActivity, customize::class.java)
                 intent.putExtra("user", userinfo)
                 startActivity(intent)
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.uebungen -> {
                 val intent = Intent(this@MainActivity, uebungen::class.java)
                 intent.putExtra("user", userinfo)
                 startActivity(intent)
-
+                finish()
                 return@OnNavigationItemSelectedListener true
             }
         }
