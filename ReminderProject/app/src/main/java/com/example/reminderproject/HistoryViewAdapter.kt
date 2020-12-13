@@ -26,10 +26,6 @@ class HistoryViewAdapter(private val historyList: List<historyItem>,private val 
         holder.textview1.text = currentItem.content
         holder.textview2.text = currentItem.title
 
-
-        //holder.removebutton.setOnClickListener {
-        //    historyList.
-        //}
     }
 
     override fun getItemCount() = historyList.size

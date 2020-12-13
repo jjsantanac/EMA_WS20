@@ -74,14 +74,11 @@ public class settings : AppCompatActivity() {
         startActivity(intent)
 
     }
-
-    //private val editInput= View.OnClickListener {  }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-       // user_info=intent.getSerializableExtra("user") as User
+
         loadData()
 
         val namefield=findViewById<TextView>(R.id.namefield)

@@ -7,6 +7,9 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
+import java.lang.Exception
+import java.lang.IllegalArgumentException
 
 
 class edit_profile_activity : AppCompatActivity() {
@@ -20,9 +23,32 @@ class edit_profile_activity : AppCompatActivity() {
         val weight=findViewById<EditText>(R.id.weight).text.toString()
 
         userinfo.name=name
-        userinfo.age=age.toInt()
-        userinfo.height=height.toInt()
-        userinfo.weight=weight.toInt()
+        try{
+            userinfo.age = age.toInt()
+
+        }catch(e: Exception){
+            findViewById<android.widget.EditText>(R.id.age).setError("Please enter valid age")
+            Toast.makeText(this,"Please enter correct values",Toast.LENGTH_SHORT).show()
+            return
+        }
+        try{
+            userinfo.height = height.toInt()
+
+        }catch(e: Exception){
+            findViewById<android.widget.EditText>(R.id.height).setError("Please enter valid height")
+            Toast.makeText(this,"Please enter correct values",Toast.LENGTH_SHORT).show()
+            return
+        }
+        try{
+            userinfo.weight = weight.toInt()
+
+        }catch(e: Exception){
+            findViewById<android.widget.EditText>(R.id.weight).setError("Please enter valid weight")
+            Toast.makeText(this,"Please enter correct values",Toast.LENGTH_SHORT).show()
+            return
+        }
+
+
 
         saveData(userinfo.name,userinfo.age,userinfo.height,userinfo.weight)
 

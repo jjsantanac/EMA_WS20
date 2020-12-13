@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".browse_uebuengen"
     android:id="@+id/uebungen_browser1"
-    android:background="#404040">
+    android:background="#303030">
 
     <!-- TODO: Update blank fragment layout -->
 

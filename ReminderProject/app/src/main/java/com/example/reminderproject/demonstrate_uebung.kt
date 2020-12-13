@@ -121,7 +121,7 @@ class demonstrate_uebung : AppCompatActivity() {
         }
 
 
-        //video.setMediaController(mediacontroller)
+
         video.setVideoURI(source)
         video.setOnCompletionListener {
             video.start()

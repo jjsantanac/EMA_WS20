@@ -41,7 +41,7 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
         false
 
     }
-    
+
     fun browseuebungen(){
         val transaction = supportFragmentManager.beginTransaction()
         val fragment=browse_uebuengen()
@@ -55,10 +55,6 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
         return sharedPreferences.getInt("notification_count",0)
     }
 
-    //private var notification_counter=LoadNotificationCounter()
-
-    //private var historyList=generateDummyList(notification_counter)
-    //private val adapter=HistoryViewAdapter(historyList,this)
 
     lateinit var historyList:ArrayList<historyItem>
     lateinit var adapter:HistoryViewAdapter
@@ -113,7 +109,7 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
         historyview.layoutManager=LinearLayoutManager(this)
         historyview.setHasFixedSize(true)
 
-        //val remove_history_item=findViewById<ImageButton>(R.id.removeHistoryitem)
+
 
     }
 
