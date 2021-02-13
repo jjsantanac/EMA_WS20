@@ -14,7 +14,9 @@ import androidx.navigation.navArgs
 
 
 class demonstrate_uebung : AppCompatActivity() {
+
     private val args: demonstrate_uebungArgs by navArgs()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_demonstrate_uebung)
@@ -119,13 +121,13 @@ class demonstrate_uebung : AppCompatActivity() {
                 source= Uri.parse("android.resource://$packageName/${R.raw.cheststretch}")
             }
         }
-
-
+        
 
         video.setVideoURI(source)
         video.setOnCompletionListener {
             video.start()
         }
+
         video.start()
     }
 }

@@ -66,7 +66,6 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
 
     override fun onImageClick(position: Int) {
 
-        //Toast.makeText(this,"Item $position clicked",Toast.LENGTH_SHORT).show()
         historyList.removeAt(position)
         adapter.notifyDataSetChanged()
 
@@ -103,8 +102,7 @@ class uebungen : AppCompatActivity(),HistoryViewAdapter.OnImageClickListener {
         browse_button.setOnClickListener({OpenBrowseUebungenActivity()})
 
 
-
-
+        //Init recyclerview
         historyview.adapter=adapter
         historyview.layoutManager=LinearLayoutManager(this)
         historyview.setHasFixedSize(true)

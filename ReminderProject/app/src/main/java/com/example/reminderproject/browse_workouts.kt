@@ -43,6 +43,7 @@ class browse_workouts : Fragment() {
 
         val action=browse_workoutsDirections.actionBrowseWorkoutsToWorkoutSelection(workout_num)
         findNavController().navigate(action)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

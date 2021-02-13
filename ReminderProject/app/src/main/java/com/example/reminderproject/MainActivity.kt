@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun loadData(){
+
         val sharedPreferences=getSharedPreferences("user_settings",Context.MODE_PRIVATE)
         val user_name=sharedPreferences.getString("user_name",null)
         val user_age=sharedPreferences.getInt("user_age",0)
@@ -60,6 +61,7 @@ class MainActivity : AppCompatActivity() {
         val movement_status=sharedPreferences.getBoolean("movement_reminder",true)
         val posture_status=sharedPreferences.getBoolean("posture_reminder",true)
         val drink_status=sharedPreferences.getBoolean("drink_reminder",true)
+
         userinfo.name=user_name
         userinfo.age=user_age
         userinfo.height=user_height
@@ -89,12 +91,10 @@ class MainActivity : AppCompatActivity() {
             getString(R.string.zitat14),
             getString(R.string.zitat15)
         )
+
         val quotes_index=(0..14).random()
         val scaleUp=AnimationUtils.loadAnimation(this,R.anim.scale_up)
         val scaleDown=AnimationUtils.loadAnimation(this,R.anim.scale_down)
-
-
-
 
 
         val sharedPreferences=getSharedPreferences("user_settings",Context.MODE_PRIVATE)
@@ -102,6 +102,7 @@ class MainActivity : AppCompatActivity() {
 
 
         loadData()
+
 
         val text= findViewById<TextView>(R.id.qoutes)
         text.text="\""+quotes[quotes_index]+"\""
@@ -127,6 +128,7 @@ class MainActivity : AppCompatActivity() {
 
         button_notify.setOnClickListener {
             val button_status = button_notify.text.toString()
+
             if(button_status=="ON"){
                 button_notify.text="OFF"
                 SplashActivity.Companion.timer_move.cancel()

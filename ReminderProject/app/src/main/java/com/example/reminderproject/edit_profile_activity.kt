@@ -49,7 +49,6 @@ class edit_profile_activity : AppCompatActivity() {
         }
 
 
-
         saveData(userinfo.name,userinfo.age,userinfo.height,userinfo.weight)
 
         val intent = Intent(this@edit_profile_activity, settings::class.java)
@@ -72,10 +71,7 @@ class edit_profile_activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_profile_activity)
 
-
-
         userinfo=intent.getSerializableExtra("user") as settings.User
-
 
         val save_button=findViewById<Button>(R.id.savedata)
 

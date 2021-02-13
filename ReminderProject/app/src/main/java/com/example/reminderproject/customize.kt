@@ -65,25 +65,31 @@ class customize : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_customize)
-        //userinfo=intent.getSerializableExtra("user") as settings.User
+
         val move_cb=findViewById<CheckBox>(R.id.movement_cb)
         val drink_cb=findViewById<CheckBox>(R.id.drink_cb)
         val posture_cb=findViewById<CheckBox>(R.id.posture_cb)
+
         loadData(move_cb,drink_cb,posture_cb)
+
         move_cb.setOnCheckedChangeListener { buttonView, isChecked ->
             userinfo.move = isChecked
             val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
             val editor = sharedPreferences.edit()
+
             editor.apply {
                 putBoolean("movement_reminder",userinfo.move)
             }.apply()
+
             Toast.makeText(this,"Change applied when reminders are reactivated ",Toast.LENGTH_SHORT).show()
 
         }
+
         drink_cb.setOnCheckedChangeListener { buttonView, isChecked ->
             userinfo.drink = isChecked
             val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
             val editor = sharedPreferences.edit()
+
             editor.apply {
                 putBoolean("drink_reminder", userinfo.drink)
             }.apply()
@@ -96,14 +102,17 @@ class customize : AppCompatActivity() {
             userinfo.posture = isChecked
             val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
             val editor = sharedPreferences.edit()
+
             editor.apply {
                 putBoolean("posture_reminder", userinfo.posture)
             }.apply()
-            val toast=Toast.makeText(this,"Change applied when reminders are reactivated ",Toast.LENGTH_SHORT).show()
+
+            Toast.makeText(this,"Change applied when reminders are reactivated ",Toast.LENGTH_SHORT).show()
         }
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.botom_navigation)
         bottomNavigation.selectedItemId=R.id.customize
+
 
         bottomNavigation.setOnNavigationItemSelectedListener(switchActivity)
 
@@ -161,6 +170,7 @@ class customize : AppCompatActivity() {
     fun SaveNotesOnKeyPress(rowID:String, content: String){
         val sharedPreferences = getSharedPreferences("user_settings", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
+
         editor.apply {
             putString(rowID, content)
         }.apply()
